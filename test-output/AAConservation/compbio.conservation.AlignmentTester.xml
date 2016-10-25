@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="compbio.conservation.AlignmentTester" failures="1" tests="3" time="0.063" errors="0">
+  <properties/>
+  <testcase name="testJores" time="0.0" classname="compbio.conservation.AlignmentTester"/>
+  <testcase name="testJores2" time="0.047" classname="compbio.conservation.AlignmentTester"/>
+  <testcase name="testKabat" time="0.0" classname="compbio.conservation.AlignmentTester">
+    <failure type="java.lang.NullPointerException">
+      <![CDATA[java.lang.NullPointerException
+	at compbio.conservation.Alignment.kabat(Alignment.java:26)
+	at compbio.conservation.AlignmentTester.testKabat(AlignmentTester.java:124)
+... Removed 22 stack frames]]>
+    </failure>
+  </testcase>
+</testsuite>

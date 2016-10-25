@@ -1,0 +1,78 @@
+PFAM PF00532 family (12747 sequences) task all methods 
+1x cpu 532m
+4x cpu 384m 
+8x cpu 297m
+
+orig 380m ?
+
+PFAM task SMERFS only 
+1x 239m  
+4x 29m 25s 
+
+SMERFS speed up coefficient
+1x ration 1
+2x ration 0.9 per cpu
+4x ratio for SMERFS 0.79 per cpu
+6x ratio 0.6 per cpu
+8x ration 0.55 per cpu
+
+SMERFS actual exec time for 1000x3000 (len) 
+8x 2m 30s 
+sequential 12m 21s 
+about 5x faster 
+
+statp3.out>
+Using 4 CPUs
+Start time: 2010/08/30 00:39:24
+Alignment loaded in: 5576 ms
+Alignment has: 12747 sequences.
+SCHNEIDER 29 ms
+KABAT 0 ms
+SHENKIN 9 ms
+JORES 16 ms
+GERSTEIN 791 ms
+ARMON 29 ms
+ZVELIBIL 70 ms
+TAYLOR_GAPS 15 ms
+TAYLOR_NO_GAPS 10 ms
+THOMPSON 12345 ms
+MIRNY 49 ms
+WILLIAMSON 21 ms
+NOT_LANCET 55 ms
+KARLIN 961290 ms
+LANDGRAF 19531542 ms
+SANDER 1916377 ms
+VALDAR 336809 ms
+SMERFS 283865 ms
+Total calculation time: 23049 s
+End time: 2010/08/30 07:03:28
+
+
+No methods are request assuming all are required.
+Using 8 CPUs
+Start time: 2010/08/31 00:46:50
+Alignment loaded in: 4453 ms
+Alignment has: 12747 sequences.
+SCHNEIDER 33 ms
+SHENKIN 42 ms
+ARMON 28 ms
+ZVELIBIL 101 ms
+TAYLOR_GAPS 119 ms
+TAYLOR_NO_GAPS 129 ms
+JORES 142 ms
+MIRNY 46 ms
+KABAT 184 ms
+NOT_LANCET 373 ms
+GERSTEIN 1177 ms
+WILLIAMSON 2564 ms
+THOMPSON 13550 ms
+
+KARLIN 982226 ms
+SMERFS 1293295 ms
+SANDER 1781526 ms
+VALDAR 2189384 ms
+LANDGRAF 16525717 ms
+
+Total calculation time: 17824 s
+End time: 2010/08/31 05:43:50
+       

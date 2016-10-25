@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="compbio.conservation" failures="0" tests="50" time="82.048" errors="0">
+  <properties/>
+  <testcase name="inversedNormalizationTester" time="0.031" classname="compbio.conservation.AccessoryTester"/>
+  <testcase name="normalizationTester" time="0.0" classname="compbio.conservation.AccessoryTester"/>
+  <testcase name="KabatTester" time="0.0" classname="compbio.conservation.ColumnScoresTester"/>
+  <testcase name="TaylorTester" time="0.0" classname="compbio.conservation.ColumnScoresTester"/>
+  <testcase name="WilliamsonTester" time="0.0" classname="compbio.conservation.ColumnScoresTester"/>
+  <testcase name="armonScoreTester" time="0.0" classname="compbio.conservation.ColumnScoresTester"/>
+  <testcase name="joresScoreTester" time="0.015" classname="compbio.conservation.ColumnScoresTester"/>
+  <testcase name="karlinScoreTester" time="0.0" classname="compbio.conservation.ColumnScoresTester"/>
+  <testcase name="lancetScoreTester" time="0.0" classname="compbio.conservation.ColumnScoresTester"/>
+  <testcase name="landgarfScoreTester" time="0.016" classname="compbio.conservation.ColumnScoresTester"/>
+  <testcase name="mirnyTester" time="0.0" classname="compbio.conservation.ColumnScoresTester"/>
+  <testcase name="sanderScoreTester" time="0.0" classname="compbio.conservation.ColumnScoresTester"/>
+  <testcase name="schneiderTester" time="0.0" classname="compbio.conservation.ColumnScoresTester"/>
+  <testcase name="thompsonScoreTester" time="0.0" classname="compbio.conservation.ColumnScoresTester"/>
+  <testcase name="valdarScoreTester" time="0.0" classname="compbio.conservation.ColumnScoresTester"/>
+  <testcase name="armonTester" time="0.015" classname="compbio.conservation.ConservationScore2Tester"/>
+  <testcase name="gersteinTester" time="0.0" classname="compbio.conservation.ConservationScore2Tester"/>
+  <testcase name="joresTester" time="0.0" classname="compbio.conservation.ConservationScore2Tester"/>
+  <testcase name="kabatTester" time="0.0" classname="compbio.conservation.ConservationScore2Tester"/>
+  <testcase name="karlinTester" time="0.0" classname="compbio.conservation.ConservationScore2Tester"/>
+  <testcase name="landgrafTester" time="0.0" classname="compbio.conservation.ConservationScore2Tester"/>
+  <testcase name="mirnyTester" time="0.0" classname="compbio.conservation.ConservationScore2Tester"/>
+  <testcase name="notLancetTester" time="0.0" classname="compbio.conservation.ConservationScore2Tester"/>
+  <testcase name="sanderTester" time="0.0" classname="compbio.conservation.ConservationScore2Tester"/>
+  <testcase name="schneiderTester" time="0.0" classname="compbio.conservation.ConservationScore2Tester"/>
+  <testcase name="shenkinTester" time="0.0" classname="compbio.conservation.ConservationScore2Tester"/>
+  <testcase name="smallestTaylorSetNoGapsTester" time="0.0" classname="compbio.conservation.ConservationScore2Tester"/>
+  <testcase name="smallestTaylosetGapsTester" time="0.0" classname="compbio.conservation.ConservationScore2Tester"/>
+  <testcase name="tester" time="0.0" classname="compbio.conservation.ConservationScore2Tester"/>
+  <testcase name="thompsonTester" time="0.015" classname="compbio.conservation.ConservationScore2Tester"/>
+  <testcase name="totalAcidsWillSetsTester" time="0.0" classname="compbio.conservation.ConservationScore2Tester"/>
+  <testcase name="valdarTester" time="0.0" classname="compbio.conservation.ConservationScore2Tester"/>
+  <testcase name="williamsonTester" time="0.0" classname="compbio.conservation.ConservationScore2Tester"/>
+  <testcase name="zvelibilTester" time="0.0" classname="compbio.conservation.ConservationScore2Tester"/>
+  <testcase name="testCustomSMERFS" time="3.172" classname="compbio.conservation.ConservationTester"/>
+  <testcase name="testLoadClustalAl" time="8.297" classname="compbio.conservation.ConservationTester"/>
+  <testcase name="testMethods" time="7.984" classname="compbio.conservation.ConservationTester"/>
+  <testcase name="testSingleMethods" time="2.25" classname="compbio.conservation.ConservationTester"/>
+  <testcase name="gapColumnTester" time="0.016" classname="compbio.conservation.CorrelationTester"/>
+  <testcase name="gapColumnTesterIllegal" time="0.0" classname="compbio.conservation.CorrelationTester"/>
+  <testcase name="gapColumnTesterIllegal2" time="0.0" classname="compbio.conservation.CorrelationTester"/>
+  <testcase name="gapColumnTesterIllegal3" time="0.0" classname="compbio.conservation.CorrelationTester"/>
+  <testcase name="reproduceIssue1" time="4.937" classname="compbio.conservation.SlowMethodTester"/>
+  <testcase name="reproduceIssue4" time="4.907" classname="compbio.conservation.SlowMethodTester"/>
+  <testcase name="testAPIgetConservation" time="0.047" classname="compbio.conservation.SlowMethodTester"/>
+  <testcase name="testSadler" time="1.093" classname="compbio.conservation.SlowMethodTester"/>
+  <testcase name="testSadler" time="1.094" classname="compbio.conservation.SlowMethodTester"/>
+  <testcase name="testSadler" time="1.093" classname="compbio.conservation.SlowMethodTester"/>
+  <testcase name="testSadler" time="1.078" classname="compbio.conservation.SlowMethodTester"/>
+  <testcase name="testSadler" time="1.078" classname="compbio.conservation.SlowMethodTester"/>
+</testsuite>

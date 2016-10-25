@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG:  Unit Test</title>
+<style type="text/css">
+table caption,table.info_table,table.param,table.passed,table.failed {margin-bottom:10px;border:1px solid #000099;border-collapse:collapse;empty-cells:show;}
+table.info_table td,table.info_table th,table.param td,table.param th,table.passed td,table.passed th,table.failed td,table.failed th {
+border:1px solid #000099;padding:.25em .5em .25em .5em
+}
+table.param th {vertical-align:bottom}
+td.numi,th.numi,td.numi_attn {
+text-align:right
+}
+tr.total td {font-weight:bold}
+table caption {
+text-align:center;font-weight:bold;
+}
+table.passed tr.stripe td,table tr.passedodd td {background-color: #00AA00;}
+table.passed td,table tr.passedeven td {background-color: #33FF33;}
+table.passed tr.stripe td,table tr.skippedodd td {background-color: #cccccc;}
+table.passed td,table tr.skippedodd td {background-color: #dddddd;}
+table.failed tr.stripe td,table tr.failedodd td,table.param td.numi_attn {background-color: #FF3333;}
+table.failed td,table tr.failedeven td,table.param tr.stripe td.numi_attn {background-color: #DD0000;}
+tr.stripe td,tr.stripe th {background-color: #E6EBF9;}
+p.totop {font-size:85%;text-align:center;border-bottom:2px black solid}
+div.shootout {padding:2em;border:3px #4854A8 solid}
+</style>
+</head>
+<body>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em">compbio.conservation</td><td class="numi">46</td><td class="numi">50</td><td class="numi">0</td><td class="numi">0</td><td class="numi">82.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+</table>
+<a id="summary"></a>
+<table cellspacing=0 cellpadding=0 class="passed">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Time<br/>(Msecs)</th></tr>
+<tr><th colspan="4">compbio.conservation &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="2">compbio.conservation.AccessoryTester<td><a href="#m1"><b>inversedNormalizationTester</b>  </a></td><td class="numi">1</td><td class="numi">31</td></tr><tr class="passedodd"><td><a href="#m2"><b>normalizationTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr>
+<tr class="passedeven"><td rowspan="13">compbio.conservation.ColumnScoresTester<td><a href="#m3"><b>KabatTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m4"><b>TaylorTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m5"><b>WilliamsonTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m6"><b>armonScoreTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m7"><b>joresScoreTester</b>  </a></td><td class="numi">1</td><td class="numi">15</td></tr><tr class="passedeven"><td><a href="#m8"><b>karlinScoreTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m9"><b>lancetScoreTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m10"><b>landgarfScoreTester</b>  </a></td><td class="numi">1</td><td class="numi">16</td></tr><tr class="passedeven"><td><a href="#m11"><b>mirnyTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m12"><b>sanderScoreTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m13"><b>schneiderTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m14"><b>thompsonScoreTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m15"><b>valdarScoreTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr>
+<tr class="passedodd"><td rowspan="19">compbio.conservation.ConservationScore2Tester<td><a href="#m16"><b>armonTester</b>  </a></td><td class="numi">1</td><td class="numi">15</td></tr><tr class="passedodd"><td><a href="#m17"><b>gersteinTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m18"><b>joresTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m19"><b>kabatTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m20"><b>karlinTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m21"><b>landgrafTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m22"><b>mirnyTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m23"><b>notLancetTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m24"><b>sanderTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m25"><b>schneiderTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m26"><b>shenkinTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m27"><b>smallestTaylorSetNoGapsTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m28"><b>smallestTaylosetGapsTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m29"><b>tester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m30"><b>thompsonTester</b>  </a></td><td class="numi">1</td><td class="numi">15</td></tr><tr class="passedodd"><td><a href="#m31"><b>totalAcidsWillSetsTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m32"><b>valdarTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m33"><b>williamsonTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m34"><b>zvelibilTester</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr>
+<tr class="passedeven"><td rowspan="4">compbio.conservation.ConservationTester<td><a href="#m35"><b>testCustomSMERFS</b>  </a></td><td class="numi">1</td><td class="numi">3172</td></tr><tr class="passedeven"><td><a href="#m36"><b>testLoadClustalAl</b>  </a></td><td class="numi">1</td><td class="numi">8297</td></tr><tr class="passedeven"><td><a href="#m37"><b>testMethods</b>  </a></td><td class="numi">1</td><td class="numi">7984</td></tr><tr class="passedeven"><td><a href="#m38"><b>testSingleMethods</b>  </a></td><td class="numi">1</td><td class="numi">2250</td></tr>
+<tr class="passedodd"><td rowspan="4">compbio.conservation.CorrelationTester<td><a href="#m39"><b>gapColumnTester</b>  </a></td><td class="numi">1</td><td class="numi">16</td></tr><tr class="passedodd"><td><a href="#m40"><b>gapColumnTesterIllegal</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m41"><b>gapColumnTesterIllegal2</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m42"><b>gapColumnTesterIllegal3</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr>
+<tr class="passedeven"><td rowspan="4">compbio.conservation.SlowMethodTester<td><a href="#m43"><b>reproduceIssue1</b>  </a></td><td class="numi">1</td><td class="numi">4937</td></tr><tr class="passedeven"><td><a href="#m44"><b>reproduceIssue4</b>  </a></td><td class="numi">1</td><td class="numi">4907</td></tr><tr class="passedeven"><td><a href="#m45"><b>testAPIgetConservation</b>  </a></td><td class="numi">1</td><td class="numi">47</td></tr><tr class="passedeven"><td><a href="#m46"><b>testSadler</b>  </a></td><td class="numi">5</td><td class="numi">5468</td></tr>
+</table>
+<h1>compbio.conservation</h1>
+<a id="m1"></a><h2>compbio.conservation.AccessoryTester:inversedNormalizationTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m2"></a><h2>compbio.conservation.AccessoryTester:normalizationTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m3"></a><h2>compbio.conservation.ColumnScoresTester:KabatTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m4"></a><h2>compbio.conservation.ColumnScoresTester:TaylorTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m5"></a><h2>compbio.conservation.ColumnScoresTester:WilliamsonTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m6"></a><h2>compbio.conservation.ColumnScoresTester:armonScoreTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m7"></a><h2>compbio.conservation.ColumnScoresTester:joresScoreTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m8"></a><h2>compbio.conservation.ColumnScoresTester:karlinScoreTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m9"></a><h2>compbio.conservation.ColumnScoresTester:lancetScoreTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m10"></a><h2>compbio.conservation.ColumnScoresTester:landgarfScoreTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m11"></a><h2>compbio.conservation.ColumnScoresTester:mirnyTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m12"></a><h2>compbio.conservation.ColumnScoresTester:sanderScoreTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m13"></a><h2>compbio.conservation.ColumnScoresTester:schneiderTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m14"></a><h2>compbio.conservation.ColumnScoresTester:thompsonScoreTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m15"></a><h2>compbio.conservation.ColumnScoresTester:valdarScoreTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m16"></a><h2>compbio.conservation.ConservationScore2Tester:armonTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m17"></a><h2>compbio.conservation.ConservationScore2Tester:gersteinTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m18"></a><h2>compbio.conservation.ConservationScore2Tester:joresTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m19"></a><h2>compbio.conservation.ConservationScore2Tester:kabatTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m20"></a><h2>compbio.conservation.ConservationScore2Tester:karlinTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m21"></a><h2>compbio.conservation.ConservationScore2Tester:landgrafTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m22"></a><h2>compbio.conservation.ConservationScore2Tester:mirnyTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m23"></a><h2>compbio.conservation.ConservationScore2Tester:notLancetTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m24"></a><h2>compbio.conservation.ConservationScore2Tester:sanderTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m25"></a><h2>compbio.conservation.ConservationScore2Tester:schneiderTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m26"></a><h2>compbio.conservation.ConservationScore2Tester:shenkinTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m27"></a><h2>compbio.conservation.ConservationScore2Tester:smallestTaylorSetNoGapsTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m28"></a><h2>compbio.conservation.ConservationScore2Tester:smallestTaylosetGapsTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m29"></a><h2>compbio.conservation.ConservationScore2Tester:tester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m30"></a><h2>compbio.conservation.ConservationScore2Tester:thompsonTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m31"></a><h2>compbio.conservation.ConservationScore2Tester:totalAcidsWillSetsTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m32"></a><h2>compbio.conservation.ConservationScore2Tester:valdarTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m33"></a><h2>compbio.conservation.ConservationScore2Tester:williamsonTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m34"></a><h2>compbio.conservation.ConservationScore2Tester:zvelibilTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m35"></a><h2>compbio.conservation.ConservationTester:testCustomSMERFS</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m36"></a><h2>compbio.conservation.ConservationTester:testLoadClustalAl</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m37"></a><h2>compbio.conservation.ConservationTester:testMethods</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m38"></a><h2>compbio.conservation.ConservationTester:testSingleMethods</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m39"></a><h2>compbio.conservation.CorrelationTester:gapColumnTester</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m40"></a><h2>compbio.conservation.CorrelationTester:gapColumnTesterIllegal</h2>
+<div style="padding-left:3em">
+<p>Input has badly aligned sequences with columns containing nothing but the gaps. Conservation methods cannot be calculated for such an alignment ! 
+Gap characters are : [ , *, -, .]</p>
+compbio.conservation.AminoAcidMatrix.gapOnlyColumnCheck(AminoAcidMatrix.java:355)
+<br/>at compbio.conservation.CorrelationTester.gapColumnTesterIllegal(CorrelationTester.java:53)
+<br/>24 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m41"></a><h2>compbio.conservation.CorrelationTester:gapColumnTesterIllegal2</h2>
+<div style="padding-left:3em">
+<p>Input has badly aligned sequences with columns containing nothing but the gaps. Conservation methods cannot be calculated for such an alignment ! 
+Gap characters are : [ ,  ,  , -]</p>
+compbio.conservation.AminoAcidMatrix.gapOnlyColumnCheck(AminoAcidMatrix.java:355)
+<br/>at compbio.conservation.CorrelationTester.gapColumnTesterIllegal2(CorrelationTester.java:60)
+<br/>24 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m42"></a><h2>compbio.conservation.CorrelationTester:gapColumnTesterIllegal3</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m43"></a><h2>compbio.conservation.SlowMethodTester:reproduceIssue1</h2>
+<div style="padding-left:3em">
+<p>Input has badly aligned sequences with columns containing nothing but the gaps. Conservation methods cannot be calculated for such an alignment ! 
+Gap characters are : [ , *, -, ., X]</p>
+compbio.conservation.AminoAcidMatrix.gapOnlyColumnCheck(AminoAcidMatrix.java:355)
+<br/>at compbio.conservation.AminoAcidMatrix.gapOnlyColumnsCheck(AminoAcidMatrix.java:326)
+<br/>at compbio.conservation.AminoAcidMatrix.&lt;init&gt;(AminoAcidMatrix.java:320)
+<br/>at compbio.conservation.SlowMethodTester.reproduceIssue1(SlowMethodTester.java:171)
+<br/>24 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m44"></a><h2>compbio.conservation.SlowMethodTester:reproduceIssue4</h2>
+<div style="padding-left:3em">
+<p>Input has badly aligned sequences with columns containing nothing but the gaps. Conservation methods cannot be calculated for such an alignment ! 
+Gap characters are : [ , *, -, ., X]</p>
+compbio.conservation.AminoAcidMatrix.gapOnlyColumnCheck(AminoAcidMatrix.java:355)
+<br/>at compbio.conservation.AminoAcidMatrix.gapOnlyColumnsCheck(AminoAcidMatrix.java:326)
+<br/>at compbio.conservation.AminoAcidMatrix.&lt;init&gt;(AminoAcidMatrix.java:320)
+<br/>at compbio.conservation.SlowMethodTester.reproduceIssue4(SlowMethodTester.java:206)
+<br/>24 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m45"></a><h2>compbio.conservation.SlowMethodTester:testAPIgetConservation</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m46"></a><h2>compbio.conservation.SlowMethodTester:testSadler</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

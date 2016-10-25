@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="compbio.util.SequenceUtilTester" failures="0" tests="3" time="0.031" errors="0">
+  <properties/>
+  <testcase name="testLoadFile" time="0.015" classname="compbio.util.SequenceUtilTester"/>
+  <testcase name="testLoadFile" time="0.015" classname="compbio.util.SequenceUtilTester"/>
+  <testcase name="testLoadFile" time="0.015" classname="compbio.util.SequenceUtilTester"/>
+</testsuite>

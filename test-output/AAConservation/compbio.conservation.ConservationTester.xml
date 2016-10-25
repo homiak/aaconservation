@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="compbio.conservation.ConservationTester" failures="0" tests="4" time="63.174" errors="0">
+  <properties/>
+  <testcase name="testCustomSMERFS" time="3.0" classname="compbio.conservation.ConservationTester"/>
+  <testcase name="testLoadClustalAl" time="7.813" classname="compbio.conservation.ConservationTester"/>
+  <testcase name="testMethods" time="7.672" classname="compbio.conservation.ConservationTester"/>
+  <testcase name="testSingleMethods" time="2.14" classname="compbio.conservation.ConservationTester"/>
+</testsuite>

@@ -1,0 +1,23 @@
+REM 
+REM #Method names, input file paths are required. Application will not run until these 2 arguments are provided.
+REM #If you want results printed, both format an input file path have to be provided
+REM #Methods not provided. Please provide methods in format -m=method1,marthod2,method3
+REM #Supported methods:
+REM #KABAT_SCORE
+REM #JORES_SCORE
+REM #SCHNEIDER_SCORE
+REM #SHENKIN_SCORE
+REM #GERSTEIN_SCORE
+REM #TAYLOR_SCORE_GAPS
+REM #TAYLOR_SCORE_NO_GAPS
+REM #ZVELIBIL_SCORE
+REM #KARLIN_SCORE
+REM #ARMON_SCORE
+REM #THOMPSON_SCORE
+REM #NOT_LANCET_SCORE
+REM #MIRNY_SCORE
+REM #WILLIAMSON_SCORE
+REM #LANDGRAF_SCORE
+REM #SANDER_SCORE
+REM #VALDAR_SCORE
+REM #Input file path not provided. Please provide input file path in format -i=inputFile - where inputFile is a full path to FASTA formatted file.

@@ -1,0 +1,557 @@
+<html>
+<head>
+<title>TestNG:  compbio.conservation</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>compbio.conservation</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>50/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Dec 21 12:22:00 GMT 2010</td>
+</tr>
+<tr><td>Total time:</td><td>82 seconds (82048 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='compbio.conservation.ColumnScoresTester.KabatTester()'><b>KabatTester</b><br>Test class: compbio.conservation.ColumnScoresTester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ColumnScoresTester@1ebd75b</td></tr>
+<tr>
+<td title='compbio.conservation.ColumnScoresTester.TaylorTester()'><b>TaylorTester</b><br>Test class: compbio.conservation.ColumnScoresTester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ColumnScoresTester@1ebd75b</td></tr>
+<tr>
+<td title='compbio.conservation.ColumnScoresTester.WilliamsonTester()'><b>WilliamsonTester</b><br>Test class: compbio.conservation.ColumnScoresTester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ColumnScoresTester@1ebd75b</td></tr>
+<tr>
+<td title='compbio.conservation.ColumnScoresTester.armonScoreTester()'><b>armonScoreTester</b><br>Test class: compbio.conservation.ColumnScoresTester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ColumnScoresTester@1ebd75b</td></tr>
+<tr>
+<td title='compbio.conservation.ConservationScore2Tester.armonTester()'><b>armonTester</b><br>Test class: compbio.conservation.ConservationScore2Tester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ConservationScore2Tester@87c268</td></tr>
+<tr>
+<td title='compbio.conservation.CorrelationTester.gapColumnTester()'><b>gapColumnTester</b><br>Test class: compbio.conservation.CorrelationTester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.CorrelationTester@110fe28</td></tr>
+<tr>
+<td title='compbio.conservation.CorrelationTester.gapColumnTesterIllegal()'><b>gapColumnTesterIllegal</b><br>Test class: compbio.conservation.CorrelationTester</td>
+<td><div><pre>java.lang.IllegalArgumentException: Input has badly aligned sequences with columns containing nothing but the gaps. Conservation methods cannot be calculated for such an alignment ! 
+Gap characters are : [ , *, -, .]
+	at compbio.conservation.AminoAcidMatrix.gapOnlyColumnCheck(AminoAcidMatrix.java:355)
+	at compbio.conservation.CorrelationTester.gapColumnTesterIllegal(CorrelationTester.java:53)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:640)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:627)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:799)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1103)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:137)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:121)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1098)
+	at org.testng.TestRunner.privateRun(TestRunner.java:727)
+	at org.testng.TestRunner.run(TestRunner.java:581)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:315)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:272)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:221)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:40)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:83)
+	at org.testng.internal.thread.ThreadUtil$CountDownLatchedRunnable.run(ThreadUtil.java:151)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+</pre></div><a href='#' onClick='toggleBox("stack-trace30863650", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace30863650'><pre>java.lang.IllegalArgumentException: Input has badly aligned sequences with columns containing nothing but the gaps. Conservation methods cannot be calculated for such an alignment ! 
+Gap characters are : [ , *, -, .]
+	at compbio.conservation.AminoAcidMatrix.gapOnlyColumnCheck(AminoAcidMatrix.java:355)
+	at compbio.conservation.CorrelationTester.gapColumnTesterIllegal(CorrelationTester.java:53)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:640)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:627)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:799)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1103)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:137)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:121)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1098)
+	at org.testng.TestRunner.privateRun(TestRunner.java:727)
+	at org.testng.TestRunner.run(TestRunner.java:581)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:315)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:272)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:221)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:40)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:83)
+	at org.testng.internal.thread.ThreadUtil$CountDownLatchedRunnable.run(ThreadUtil.java:151)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+</pre></div></td>
+<td>0</td>
+<td>compbio.conservation.CorrelationTester@110fe28</td></tr>
+<tr>
+<td title='compbio.conservation.CorrelationTester.gapColumnTesterIllegal2()'><b>gapColumnTesterIllegal2</b><br>Test class: compbio.conservation.CorrelationTester</td>
+<td><div><pre>java.lang.IllegalArgumentException: Input has badly aligned sequences with columns containing nothing but the gaps. Conservation methods cannot be calculated for such an alignment ! 
+Gap characters are : [ ,  ,  , -]
+	at compbio.conservation.AminoAcidMatrix.gapOnlyColumnCheck(AminoAcidMatrix.java:355)
+	at compbio.conservation.CorrelationTester.gapColumnTesterIllegal2(CorrelationTester.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:640)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:627)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:799)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1103)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:137)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:121)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1098)
+	at org.testng.TestRunner.privateRun(TestRunner.java:727)
+	at org.testng.TestRunner.run(TestRunner.java:581)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:315)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:272)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:221)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:40)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:83)
+	at org.testng.internal.thread.ThreadUtil$CountDownLatchedRunnable.run(ThreadUtil.java:151)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+</pre></div><a href='#' onClick='toggleBox("stack-trace7408068", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace7408068'><pre>java.lang.IllegalArgumentException: Input has badly aligned sequences with columns containing nothing but the gaps. Conservation methods cannot be calculated for such an alignment ! 
+Gap characters are : [ ,  ,  , -]
+	at compbio.conservation.AminoAcidMatrix.gapOnlyColumnCheck(AminoAcidMatrix.java:355)
+	at compbio.conservation.CorrelationTester.gapColumnTesterIllegal2(CorrelationTester.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:640)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:627)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:799)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1103)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:137)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:121)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1098)
+	at org.testng.TestRunner.privateRun(TestRunner.java:727)
+	at org.testng.TestRunner.run(TestRunner.java:581)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:315)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:272)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:221)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:40)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:83)
+	at org.testng.internal.thread.ThreadUtil$CountDownLatchedRunnable.run(ThreadUtil.java:151)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+</pre></div></td>
+<td>0</td>
+<td>compbio.conservation.CorrelationTester@110fe28</td></tr>
+<tr>
+<td title='compbio.conservation.CorrelationTester.gapColumnTesterIllegal3()'><b>gapColumnTesterIllegal3</b><br>Test class: compbio.conservation.CorrelationTester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.CorrelationTester@110fe28</td></tr>
+<tr>
+<td title='compbio.conservation.ConservationScore2Tester.gersteinTester()'><b>gersteinTester</b><br>Test class: compbio.conservation.ConservationScore2Tester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ConservationScore2Tester@87c268</td></tr>
+<tr>
+<td title='compbio.conservation.AccessoryTester.inversedNormalizationTester()'><b>inversedNormalizationTester</b><br>Test class: compbio.conservation.AccessoryTester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.AccessoryTester@15ac3c9</td></tr>
+<tr>
+<td title='compbio.conservation.ColumnScoresTester.joresScoreTester()'><b>joresScoreTester</b><br>Test class: compbio.conservation.ColumnScoresTester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ColumnScoresTester@1ebd75b</td></tr>
+<tr>
+<td title='compbio.conservation.ConservationScore2Tester.joresTester()'><b>joresTester</b><br>Test class: compbio.conservation.ConservationScore2Tester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ConservationScore2Tester@87c268</td></tr>
+<tr>
+<td title='compbio.conservation.ConservationScore2Tester.kabatTester()'><b>kabatTester</b><br>Test class: compbio.conservation.ConservationScore2Tester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ConservationScore2Tester@87c268</td></tr>
+<tr>
+<td title='compbio.conservation.ColumnScoresTester.karlinScoreTester()'><b>karlinScoreTester</b><br>Test class: compbio.conservation.ColumnScoresTester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ColumnScoresTester@1ebd75b</td></tr>
+<tr>
+<td title='compbio.conservation.ConservationScore2Tester.karlinTester()'><b>karlinTester</b><br>Test class: compbio.conservation.ConservationScore2Tester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ConservationScore2Tester@87c268</td></tr>
+<tr>
+<td title='compbio.conservation.ColumnScoresTester.lancetScoreTester()'><b>lancetScoreTester</b><br>Test class: compbio.conservation.ColumnScoresTester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ColumnScoresTester@1ebd75b</td></tr>
+<tr>
+<td title='compbio.conservation.ColumnScoresTester.landgarfScoreTester()'><b>landgarfScoreTester</b><br>Test class: compbio.conservation.ColumnScoresTester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ColumnScoresTester@1ebd75b</td></tr>
+<tr>
+<td title='compbio.conservation.ConservationScore2Tester.landgrafTester()'><b>landgrafTester</b><br>Test class: compbio.conservation.ConservationScore2Tester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ConservationScore2Tester@87c268</td></tr>
+<tr>
+<td title='compbio.conservation.ColumnScoresTester.mirnyTester()'><b>mirnyTester</b><br>Test class: compbio.conservation.ColumnScoresTester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ColumnScoresTester@1ebd75b</td></tr>
+<tr>
+<td title='compbio.conservation.ConservationScore2Tester.mirnyTester()'><b>mirnyTester</b><br>Test class: compbio.conservation.ConservationScore2Tester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ConservationScore2Tester@87c268</td></tr>
+<tr>
+<td title='compbio.conservation.AccessoryTester.normalizationTester()'><b>normalizationTester</b><br>Test class: compbio.conservation.AccessoryTester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.AccessoryTester@15ac3c9</td></tr>
+<tr>
+<td title='compbio.conservation.ConservationScore2Tester.notLancetTester()'><b>notLancetTester</b><br>Test class: compbio.conservation.ConservationScore2Tester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ConservationScore2Tester@87c268</td></tr>
+<tr>
+<td title='compbio.conservation.SlowMethodTester.reproduceIssue1()'><b>reproduceIssue1</b><br>Test class: compbio.conservation.SlowMethodTester</td>
+<td><div><pre>java.lang.IllegalArgumentException: Input has badly aligned sequences with columns containing nothing but the gaps. Conservation methods cannot be calculated for such an alignment ! 
+Gap characters are : [ , *, -, ., X]
+	at compbio.conservation.AminoAcidMatrix.gapOnlyColumnCheck(AminoAcidMatrix.java:355)
+	at compbio.conservation.AminoAcidMatrix.gapOnlyColumnsCheck(AminoAcidMatrix.java:326)
+	at compbio.conservation.AminoAcidMatrix.&lt;init&gt;(AminoAcidMatrix.java:320)
+	at compbio.conservation.SlowMethodTester.reproduceIssue1(SlowMethodTester.java:171)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:640)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:627)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:799)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1103)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:137)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:121)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1098)
+	at org.testng.TestRunner.privateRun(TestRunner.java:727)
+	at org.testng.TestRunner.run(TestRunner.java:581)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:315)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:272)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:221)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:40)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:83)
+	at org.testng.internal.thread.ThreadUtil$CountDownLatchedRunnable.run(ThreadUtil.java:151)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+</pre></div><a href='#' onClick='toggleBox("stack-trace10059989", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace10059989'><pre>java.lang.IllegalArgumentException: Input has badly aligned sequences with columns containing nothing but the gaps. Conservation methods cannot be calculated for such an alignment ! 
+Gap characters are : [ , *, -, ., X]
+	at compbio.conservation.AminoAcidMatrix.gapOnlyColumnCheck(AminoAcidMatrix.java:355)
+	at compbio.conservation.AminoAcidMatrix.gapOnlyColumnsCheck(AminoAcidMatrix.java:326)
+	at compbio.conservation.AminoAcidMatrix.&lt;init&gt;(AminoAcidMatrix.java:320)
+	at compbio.conservation.SlowMethodTester.reproduceIssue1(SlowMethodTester.java:171)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:640)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:627)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:799)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1103)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:137)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:121)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1098)
+	at org.testng.TestRunner.privateRun(TestRunner.java:727)
+	at org.testng.TestRunner.run(TestRunner.java:581)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:315)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:272)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:221)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:40)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:83)
+	at org.testng.internal.thread.ThreadUtil$CountDownLatchedRunnable.run(ThreadUtil.java:151)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+</pre></div></td>
+<td>4</td>
+<td>compbio.conservation.SlowMethodTester@9e29fb</td></tr>
+<tr>
+<td title='compbio.conservation.SlowMethodTester.reproduceIssue4()'><b>reproduceIssue4</b><br>Test class: compbio.conservation.SlowMethodTester</td>
+<td><div><pre>java.lang.IllegalArgumentException: Input has badly aligned sequences with columns containing nothing but the gaps. Conservation methods cannot be calculated for such an alignment ! 
+Gap characters are : [ , *, -, ., X]
+	at compbio.conservation.AminoAcidMatrix.gapOnlyColumnCheck(AminoAcidMatrix.java:355)
+	at compbio.conservation.AminoAcidMatrix.gapOnlyColumnsCheck(AminoAcidMatrix.java:326)
+	at compbio.conservation.AminoAcidMatrix.&lt;init&gt;(AminoAcidMatrix.java:320)
+	at compbio.conservation.SlowMethodTester.reproduceIssue4(SlowMethodTester.java:206)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:640)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:627)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:799)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1103)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:137)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:121)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1098)
+	at org.testng.TestRunner.privateRun(TestRunner.java:727)
+	at org.testng.TestRunner.run(TestRunner.java:581)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:315)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:272)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:221)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:40)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:83)
+	at org.testng.internal.thread.ThreadUtil$CountDownLatchedRunnable.run(ThreadUtil.java:151)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1977511", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1977511'><pre>java.lang.IllegalArgumentException: Input has badly aligned sequences with columns containing nothing but the gaps. Conservation methods cannot be calculated for such an alignment ! 
+Gap characters are : [ , *, -, ., X]
+	at compbio.conservation.AminoAcidMatrix.gapOnlyColumnCheck(AminoAcidMatrix.java:355)
+	at compbio.conservation.AminoAcidMatrix.gapOnlyColumnsCheck(AminoAcidMatrix.java:326)
+	at compbio.conservation.AminoAcidMatrix.&lt;init&gt;(AminoAcidMatrix.java:320)
+	at compbio.conservation.SlowMethodTester.reproduceIssue4(SlowMethodTester.java:206)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:640)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:627)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:799)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1103)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:137)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:121)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1098)
+	at org.testng.TestRunner.privateRun(TestRunner.java:727)
+	at org.testng.TestRunner.run(TestRunner.java:581)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:315)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:272)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:221)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:40)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:83)
+	at org.testng.internal.thread.ThreadUtil$CountDownLatchedRunnable.run(ThreadUtil.java:151)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+</pre></div></td>
+<td>4</td>
+<td>compbio.conservation.SlowMethodTester@9e29fb</td></tr>
+<tr>
+<td title='compbio.conservation.ColumnScoresTester.sanderScoreTester()'><b>sanderScoreTester</b><br>Test class: compbio.conservation.ColumnScoresTester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ColumnScoresTester@1ebd75b</td></tr>
+<tr>
+<td title='compbio.conservation.ConservationScore2Tester.sanderTester()'><b>sanderTester</b><br>Test class: compbio.conservation.ConservationScore2Tester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ConservationScore2Tester@87c268</td></tr>
+<tr>
+<td title='compbio.conservation.ColumnScoresTester.schneiderTester()'><b>schneiderTester</b><br>Test class: compbio.conservation.ColumnScoresTester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ColumnScoresTester@1ebd75b</td></tr>
+<tr>
+<td title='compbio.conservation.ConservationScore2Tester.schneiderTester()'><b>schneiderTester</b><br>Test class: compbio.conservation.ConservationScore2Tester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ConservationScore2Tester@87c268</td></tr>
+<tr>
+<td title='compbio.conservation.ConservationScore2Tester.shenkinTester()'><b>shenkinTester</b><br>Test class: compbio.conservation.ConservationScore2Tester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ConservationScore2Tester@87c268</td></tr>
+<tr>
+<td title='compbio.conservation.ConservationScore2Tester.smallestTaylorSetNoGapsTester()'><b>smallestTaylorSetNoGapsTester</b><br>Test class: compbio.conservation.ConservationScore2Tester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ConservationScore2Tester@87c268</td></tr>
+<tr>
+<td title='compbio.conservation.ConservationScore2Tester.smallestTaylosetGapsTester()'><b>smallestTaylosetGapsTester</b><br>Test class: compbio.conservation.ConservationScore2Tester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ConservationScore2Tester@87c268</td></tr>
+<tr>
+<td title='compbio.conservation.SlowMethodTester.testAPIgetConservation()'><b>testAPIgetConservation</b><br>Test class: compbio.conservation.SlowMethodTester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.SlowMethodTester@9e29fb</td></tr>
+<tr>
+<td title='compbio.conservation.ConservationTester.testCustomSMERFS()'><b>testCustomSMERFS</b><br>Test class: compbio.conservation.ConservationTester</td>
+<td></td>
+<td>3</td>
+<td>compbio.conservation.ConservationTester@ec4a87</td></tr>
+<tr>
+<td title='compbio.conservation.ConservationTester.testLoadClustalAl()'><b>testLoadClustalAl</b><br>Test class: compbio.conservation.ConservationTester</td>
+<td></td>
+<td>8</td>
+<td>compbio.conservation.ConservationTester@ec4a87</td></tr>
+<tr>
+<td title='compbio.conservation.ConservationTester.testMethods()'><b>testMethods</b><br>Test class: compbio.conservation.ConservationTester</td>
+<td></td>
+<td>7</td>
+<td>compbio.conservation.ConservationTester@ec4a87</td></tr>
+<tr>
+<td title='compbio.conservation.SlowMethodTester.testSadler()'><b>testSadler</b><br>Test class: compbio.conservation.SlowMethodTester</td>
+<td></td>
+<td>1</td>
+<td>compbio.conservation.SlowMethodTester@9e29fb</td></tr>
+<tr>
+<td title='compbio.conservation.SlowMethodTester.testSadler()'><b>testSadler</b><br>Test class: compbio.conservation.SlowMethodTester</td>
+<td></td>
+<td>1</td>
+<td>compbio.conservation.SlowMethodTester@9e29fb</td></tr>
+<tr>
+<td title='compbio.conservation.SlowMethodTester.testSadler()'><b>testSadler</b><br>Test class: compbio.conservation.SlowMethodTester</td>
+<td></td>
+<td>1</td>
+<td>compbio.conservation.SlowMethodTester@9e29fb</td></tr>
+<tr>
+<td title='compbio.conservation.SlowMethodTester.testSadler()'><b>testSadler</b><br>Test class: compbio.conservation.SlowMethodTester</td>
+<td></td>
+<td>1</td>
+<td>compbio.conservation.SlowMethodTester@9e29fb</td></tr>
+<tr>
+<td title='compbio.conservation.SlowMethodTester.testSadler()'><b>testSadler</b><br>Test class: compbio.conservation.SlowMethodTester</td>
+<td></td>
+<td>1</td>
+<td>compbio.conservation.SlowMethodTester@9e29fb</td></tr>
+<tr>
+<td title='compbio.conservation.ConservationTester.testSingleMethods()'><b>testSingleMethods</b><br>Test class: compbio.conservation.ConservationTester</td>
+<td></td>
+<td>2</td>
+<td>compbio.conservation.ConservationTester@ec4a87</td></tr>
+<tr>
+<td title='compbio.conservation.ConservationScore2Tester.tester()'><b>tester</b><br>Test class: compbio.conservation.ConservationScore2Tester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ConservationScore2Tester@87c268</td></tr>
+<tr>
+<td title='compbio.conservation.ColumnScoresTester.thompsonScoreTester()'><b>thompsonScoreTester</b><br>Test class: compbio.conservation.ColumnScoresTester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ColumnScoresTester@1ebd75b</td></tr>
+<tr>
+<td title='compbio.conservation.ConservationScore2Tester.thompsonTester()'><b>thompsonTester</b><br>Test class: compbio.conservation.ConservationScore2Tester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ConservationScore2Tester@87c268</td></tr>
+<tr>
+<td title='compbio.conservation.ConservationScore2Tester.totalAcidsWillSetsTester()'><b>totalAcidsWillSetsTester</b><br>Test class: compbio.conservation.ConservationScore2Tester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ConservationScore2Tester@87c268</td></tr>
+<tr>
+<td title='compbio.conservation.ColumnScoresTester.valdarScoreTester()'><b>valdarScoreTester</b><br>Test class: compbio.conservation.ColumnScoresTester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ColumnScoresTester@1ebd75b</td></tr>
+<tr>
+<td title='compbio.conservation.ConservationScore2Tester.valdarTester()'><b>valdarTester</b><br>Test class: compbio.conservation.ConservationScore2Tester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ConservationScore2Tester@87c268</td></tr>
+<tr>
+<td title='compbio.conservation.ConservationScore2Tester.williamsonTester()'><b>williamsonTester</b><br>Test class: compbio.conservation.ConservationScore2Tester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ConservationScore2Tester@87c268</td></tr>
+<tr>
+<td title='compbio.conservation.ConservationScore2Tester.zvelibilTester()'><b>zvelibilTester</b><br>Test class: compbio.conservation.ConservationScore2Tester</td>
+<td></td>
+<td>0</td>
+<td>compbio.conservation.ConservationScore2Tester@87c268</td></tr>
+</table><p>
+</body>
+</html>

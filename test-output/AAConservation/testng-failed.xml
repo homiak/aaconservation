@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" configfailurepolicy="skip" verbose="1" name="Failed suite [AAConservation]" skipfailedinvocationcounts="false" parallel="false" annotations="JDK" data-provider-thread-count="10">
+  <test verbose="1" name="compbio.conservation.ResultReaderTester(failed)" junit="false" parallel="false" annotations="JDK">
+    <classes>
+      <class name="compbio.conservation.ResultReaderTester">
+        <methods>
+          <include name="testReadResults"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

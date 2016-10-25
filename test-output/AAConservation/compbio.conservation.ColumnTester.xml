@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="compbio.conservation.ColumnTester" failures="1" tests="14" time="0.125" errors="0">
+  <properties/>
+  <testcase name="KabatTester" time="0.016" classname="compbio.conservation.ColumnTester"/>
+  <testcase name="OccuranceTester" time="0.031" classname="compbio.conservation.ColumnTester"/>
+  <testcase name="TaylorTester" time="0.016" classname="compbio.conservation.ColumnTester"/>
+  <testcase name="WilliamsonTester" time="0.0" classname="compbio.conservation.ColumnTester"/>
+  <testcase name="armonScoreTester" time="0.0" classname="compbio.conservation.ColumnTester"/>
+  <testcase name="joresScoreTester" time="0.0" classname="compbio.conservation.ColumnTester"/>
+  <testcase name="karlinScoreTester" time="0.0" classname="compbio.conservation.ColumnTester"/>
+  <testcase name="lancetScoreTester" time="0.0" classname="compbio.conservation.ColumnTester"/>
+  <testcase name="landgarfScoreTester" time="0.015" classname="compbio.conservation.ColumnTester">
+    <failure type="java.lang.AssertionError" message="expected:&amp;lt;1177.13&amp;gt; but was:&amp;lt;1171.530118203314&amp;gt;">
+      <![CDATA[java.lang.AssertionError: expected:<1177.13> but was:<1171.530118203314>
+	at compbio.conservation.ColumnTester.landgarfScoreTester(ColumnTester.java:353)
+... Removed 26 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="mirnyTester" time="0.0" classname="compbio.conservation.ColumnTester"/>
+  <testcase name="sanderScoreTester" time="0.0" classname="compbio.conservation.ColumnTester"/>
+  <testcase name="schneiderTester" time="0.0" classname="compbio.conservation.ColumnTester"/>
+  <testcase name="thompsonScoreTester" time="0.0" classname="compbio.conservation.ColumnTester"/>
+  <testcase name="valdarScoreTester" time="0.0" classname="compbio.conservation.ColumnTester"/>
+</testsuite>
