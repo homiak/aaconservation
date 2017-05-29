@@ -6,7 +6,7 @@
 	<property name="java.src" location="${basedir}/src" />
 	<property name="classes" location="${basedir}/bin" />
 	<property name="lib.path" location="${basedir}/lib" />
-	<property name="jar.version" value="1.0" />
+	<property name="jar.version" value="1.1" />
 	<property name="jar.name" value="compbio-conservation-${jar.version}.jar" />
 	<property name="jar.path" value="${basedir}/${jar.name}" />
 	<property name="distdir" value="website"/>
@@ -43,7 +43,7 @@
 			<zipgroupfileset excludes="META-INF/*.SF" dir="lib" includes="datamodel-1.0.jar"/>
 			<fileset dir="${basedir}/bin/" includes="compbio/**" />
 			<manifest>
-				<attribute name="Built-By" value="Petr V Troshin" />
+				<attribute name="Built-By" value="Syed Asad Rahman, Petr V Troshin" />
 				<attribute name="Class-Path" value="." />
 				<attribute name="Main-Class" value="compbio.conservation.ParallelConservationClient" />
 				<attribute name="Implementation-Title" value="AA Conservation calculator" />
@@ -60,10 +60,10 @@
 					<include name="**"/>
 				</fileset>
 				<manifest>
-					<attribute name="Built-By" value="Peter Troshin" />
+					<attribute name="Built-By" value="Peter Troshin and Syed Asad Rahman" />
 					<attribute name="Class-Path" value="." />
 					<attribute name="Implementation-Title" value="AACon Source Code Archive" />
-					<attribute name="Implementation-Vendor" value="Peter Troshin and Agnieszka Golicz" />
+					<attribute name="Implementation-Vendor" value="Peter Troshin, Agnieszka Golicz and Syed Asad Rahman" />
 					<attribute name="Implementation-URL" value="http://www.compbio.dundee.ac.uk/aacon" />
 				</manifest>
 			</jar>
