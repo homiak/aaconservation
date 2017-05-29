@@ -28,7 +28,7 @@ import compbio.data.sequence.ConservationMethod;
 /**
  * Parses the command line arguments
  *
- * @author Peter Troshin & Agnieszka Golicz
+ * @author Peter Troshin, Agnieszka Golicz & Syed Asad Rahman
  *
  */
 final class CmdParser {
@@ -49,7 +49,7 @@ final class CmdParser {
     final static String gapKey = "-g";
     final static String statKey = "-d";
     final static String CONSERVATION_HELP = "\r\n"
-            + "AA Conservation version 1.0b (2 September 2010)\r\n"
+            + "AA Conservation version 1.1b (29 May 2017)\r\n"
             + "\r\n"
             + "This program allows calculation of conservation of amino acids in\r\n"
             + "multiple sequence alignments.\r\n"
@@ -155,8 +155,7 @@ final class CmdParser {
      */
     static String getSMERFSColumnScore(String[] cmd) {
 
-        for (int i = 0; i < cmd.length; i++) {
-            String meths = cmd[i];
+        for (String meths : cmd) {
             if (meths.trim().toLowerCase()
                     .startsWith(SMERFSColumnScore + pseparator)) {
                 return meths.substring(meths.indexOf(pseparator) + 1).trim();
@@ -166,8 +165,7 @@ final class CmdParser {
     }
 
     static String getSMERFSWindowWidth(String[] cmd) {
-        for (int i = 0; i < cmd.length; i++) {
-            String meths = cmd[i];
+        for (String meths : cmd) {
             if (meths.trim().toLowerCase()
                     .startsWith(SMERFSWindowWidth + pseparator)) {
                 return meths.substring(meths.indexOf(pseparator) + 1).trim();
@@ -177,8 +175,7 @@ final class CmdParser {
     }
 
     static String getSMERFSGapTreshold(String[] cmd) {
-        for (int i = 0; i < cmd.length; i++) {
-            String meths = cmd[i];
+        for (String meths : cmd) {
             if (meths.trim().toLowerCase()
                     .startsWith(SMERFSGapTreshold + pseparator)) {
                 return meths.substring(meths.indexOf(pseparator) + 1).trim();
@@ -196,8 +193,7 @@ final class CmdParser {
      */
     static boolean getNormalize(String[] cmd) {
 
-        for (int i = 0; i < cmd.length; i++) {
-            String norm = cmd[i];
+        for (String norm : cmd) {
             if (norm.trim().toLowerCase().equals(normalizationKey)) {
                 return true;
             }
@@ -217,8 +213,8 @@ final class CmdParser {
      */
     static int getThreadNumber(String[] cmd) {
         int threadNum = 0;
-        for (int i = 0; i < cmd.length; i++) {
-            String tnum = cmd[i].trim().toLowerCase();
+        for (String cmd1 : cmd) {
+            String tnum = cmd1.trim().toLowerCase();
             if (tnum.startsWith(threadNumberKey + pseparator)) {
                 String num = tnum.substring(tnum.indexOf(pseparator) + 1);
                 if (num != null) {
@@ -237,8 +233,7 @@ final class CmdParser {
      */
     static String getFormat(String[] cmd) {
 
-        for (int i = 0; i < cmd.length; i++) {
-            String form = cmd[i];
+        for (String form : cmd) {
             if (form.trim().toLowerCase().startsWith(formatKey + pseparator)) {
                 return form.substring(form.indexOf(pseparator) + 1);
             }
@@ -254,8 +249,7 @@ final class CmdParser {
      */
     static String getOutputFilePath(String[] cmd) {
 
-        for (int i = 0; i < cmd.length; i++) {
-            String name = cmd[i];
+        for (String name : cmd) {
             if (name.trim().toLowerCase().startsWith(outputKey + pseparator)) {
                 return name.substring(name.indexOf(pseparator) + 1);
             }
@@ -271,8 +265,7 @@ final class CmdParser {
      */
     static String getInputFilePath(String[] cmd) {
 
-        for (int i = 0; i < cmd.length; i++) {
-            String name = cmd[i];
+        for (String name : cmd) {
             if (name.trim().toLowerCase().startsWith(inputKey + pseparator)) {
                 return name.substring(name.indexOf(pseparator) + 1);
             }
@@ -288,8 +281,7 @@ final class CmdParser {
      */
     static String getStatFilePath(String[] cmd) {
 
-        for (int i = 0; i < cmd.length; i++) {
-            String name = cmd[i];
+        for (String name : cmd) {
             if (name.trim().toLowerCase().startsWith(statKey + pseparator)) {
                 return name.substring(name.indexOf(pseparator) + 1);
             }
@@ -305,8 +297,7 @@ final class CmdParser {
      */
     static String[] getGapChars(String[] cmd) {
 
-        for (int i = 0; i < cmd.length; i++) {
-            String form = cmd[i];
+        for (String form : cmd) {
             if (form.trim().toLowerCase().startsWith(gapKey + pseparator)) {
                 return form.substring(form.indexOf(pseparator) + 1).split(",");
             }
