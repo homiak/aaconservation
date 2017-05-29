@@ -22,58 +22,53 @@ import compbio.data.sequence.ConservationMethod;
 
 public class AccessoryTester {
 
-	// @Test
-	// public void VoronoiTester() {
+    // @Test
+    // public void VoronoiTester() {
+    // char a = 'D';
+    // char b = 'D';
+    // char c = 'D';
+    // char d = 'D';
+    // char e = 'D';
+    // char f = 'E';
+    // /char g = 'E';
+    // char h = 'E';
+    // char i = 'F';
+    // char j = 'F';
+    // AminoAcidMatrix matrix = new AminoAcidMatrix(a, b, c, d, e, f, g, h, i,
+    // j);
+    // double result = ConservationAccessory.voronoiWeights(matrix, 1000)[0];
+    // Assert.assertEquals(result, 1.0, 0.1);
+    // }
+    @Test
+    public void normalizationTester() {
 
-	// char a = 'D';
-	// char b = 'D';
-	// char c = 'D';
-	// char d = 'D';
-	// char e = 'D';
-	// char f = 'E';
-	// /char g = 'E';
-	// char h = 'E';
-	// char i = 'F';
-	// char j = 'F';
+        double[] scores = {15, 13, 13, -32, 0};
 
-	// AminoAcidMatrix matrix = new AminoAcidMatrix(a, b, c, d, e, f, g, h, i,
-	// j);
+        double[] normalized = ConservationAccessory.normalize01(scores,
+                ConservationMethod.KABAT);
 
-	// double result = ConservationAccessory.voronoiWeights(matrix, 1000)[0];
+        System.out.println("normal");
 
-	// Assert.assertEquals(result, 1.0, 0.1);
-	// }
+        for (int i = 0; i < normalized.length; i++) {
 
-	@Test
-	public void normalizationTester() {
+            System.out.println(normalized[i]);
+        }
+    }
 
-		double[] scores = { 15, 13, 13, -32, 0 };
+    @Test
+    public void inversedNormalizationTester() {
 
-		double[] normalized = ConservationAccessory.normalize01(scores,
-				ConservationMethod.KABAT);
+        double[] scores = {15, 13, 13, -32, 0};
 
-		System.out.println("normal");
+        double[] normalized = ConservationAccessory.inversedNormalize01(scores,
+                ConservationMethod.KABAT);
 
-		for (int i = 0; i < normalized.length; i++) {
+        System.out.println("inversed");
 
-			System.out.println(normalized[i]);
-		}
-	}
+        for (int i = 0; i < normalized.length; i++) {
 
-	@Test
-	public void inversedNormalizationTester() {
-
-		double[] scores = { 15, 13, 13, -32, 0 };
-
-		double[] normalized = ConservationAccessory.inversedNormalize01(scores,
-				ConservationMethod.KABAT);
-
-		System.out.println("inversed");
-
-		for (int i = 0; i < normalized.length; i++) {
-
-			System.out.println(normalized[i]);
-		}
-	}
+            System.out.println(normalized[i]);
+        }
+    }
 
 }
