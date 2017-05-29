@@ -47,7 +47,7 @@ final class ConservationSets {
     private static final Map<String, HashSet<Character>> ZVELIBIL;
 
     static {
-        HashSet<Character> mirAliphatic = new HashSet<Character>();
+        HashSet<Character> mirAliphatic = new HashSet<>();
         mirAliphatic.add('A');
         mirAliphatic.add('V');
         mirAliphatic.add('L');
@@ -56,13 +56,13 @@ final class ConservationSets {
         mirAliphatic.add('C');
         mirAliphatic.add('J');
         mirAliphatic.add('X');
-        HashSet<Character> mirAromatic = new HashSet<Character>();
+        HashSet<Character> mirAromatic = new HashSet<>();
         mirAromatic.add('F');
         mirAromatic.add('W');
         mirAromatic.add('Y');
         mirAromatic.add('H');
         mirAromatic.add('X');
-        HashSet<Character> mirPolar = new HashSet<Character>();
+        HashSet<Character> mirPolar = new HashSet<>();
         mirPolar.add('S');
         mirPolar.add('T');
         mirPolar.add('N');
@@ -70,21 +70,21 @@ final class ConservationSets {
         mirPolar.add('Q');
         mirPolar.add('Z');
         mirPolar.add('X');
-        HashSet<Character> mirPositive = new HashSet<Character>();
+        HashSet<Character> mirPositive = new HashSet<>();
         mirPositive.add('K');
         mirPositive.add('R');
         mirPositive.add('X');
-        HashSet<Character> mirNegative = new HashSet<Character>();
+        HashSet<Character> mirNegative = new HashSet<>();
         mirNegative.add('D');
         mirNegative.add('E');
         mirNegative.add('B');
         mirNegative.add('Z');
         mirNegative.add('X');
-        HashSet<Character> mirSpecial = new HashSet<Character>();
+        HashSet<Character> mirSpecial = new HashSet<>();
         mirSpecial.add('G');
         mirSpecial.add('P');
         mirSpecial.add('X');
-        Map<String, HashSet<Character>> sets = new HashMap<String, HashSet<Character>>();
+        Map<String, HashSet<Character>> sets = new HashMap<>();
         sets.put("aliphatic", mirAliphatic);
         sets.put("aromatic", mirAromatic);
         sets.put("polar", mirPolar);
@@ -95,48 +95,48 @@ final class ConservationSets {
     }
 
     static {
-        Map<String, HashSet<Character>> willSets = new HashMap<String, HashSet<Character>>();
-        HashSet<Character> set1 = new HashSet<Character>();
+        Map<String, HashSet<Character>> willSets = new HashMap<>();
+        HashSet<Character> set1 = new HashSet<>();
         set1.add('V');
         set1.add('L');
         set1.add('I');
         set1.add('M');
         set1.add('J');
         set1.add('X');
-        HashSet<Character> set2 = new HashSet<Character>();
+        HashSet<Character> set2 = new HashSet<>();
         set2.add('F');
         set2.add('W');
         set2.add('Y');
         set2.add('X');
-        HashSet<Character> set3 = new HashSet<Character>();
+        HashSet<Character> set3 = new HashSet<>();
         set3.add('S');
         set3.add('T');
         set3.add('X');
-        HashSet<Character> set4 = new HashSet<Character>();
+        HashSet<Character> set4 = new HashSet<>();
         set4.add('N');
         set4.add('Q');
         set4.add('B');
         set4.add('Z');
         set4.add('X');
-        HashSet<Character> set5 = new HashSet<Character>();
+        HashSet<Character> set5 = new HashSet<>();
         set5.add('H');
         set5.add('K');
         set5.add('R');
         set5.add('X');
-        HashSet<Character> set6 = new HashSet<Character>();
+        HashSet<Character> set6 = new HashSet<>();
         set6.add('D');
         set6.add('E');
         set6.add('B');
         set6.add('Z');
         set6.add('X');
-        HashSet<Character> set7 = new HashSet<Character>();
+        HashSet<Character> set7 = new HashSet<>();
         set7.add('A');
         set7.add('G');
         set7.add('X');
-        HashSet<Character> set8 = new HashSet<Character>();
+        HashSet<Character> set8 = new HashSet<>();
         set8.add('P');
         set8.add('X');
-        HashSet<Character> set9 = new HashSet<Character>();
+        HashSet<Character> set9 = new HashSet<>();
         set9.add('C');
         set9.add('X');
         willSets.put("set1", set1);
@@ -152,13 +152,13 @@ final class ConservationSets {
     }
 
     static {
-        Map<String, HashSet<Character>> taySets = new HashMap<String, HashSet<Character>>();
-        HashSet<Character> tayPositive = new HashSet<Character>();
+        Map<String, HashSet<Character>> taySets = new HashMap<>();
+        HashSet<Character> tayPositive = new HashSet<>();
         tayPositive.add('R');
         tayPositive.add('K');
         tayPositive.add('H');
         tayPositive.add('X');
-        HashSet<Character> tayCharged = new HashSet<Character>();
+        HashSet<Character> tayCharged = new HashSet<>();
         tayCharged.add('D');
         tayCharged.add('E');
         tayCharged.add('R');
@@ -167,20 +167,20 @@ final class ConservationSets {
         tayCharged.add('B');
         tayCharged.add('Z');
         tayCharged.add('X');
-        HashSet<Character> chargedNonH = new HashSet<Character>();
+        HashSet<Character> chargedNonH = new HashSet<>();
         chargedNonH.add('D');
         chargedNonH.add('E');
         chargedNonH.add('R');
         chargedNonH.add('K');
         chargedNonH.add('B');
         chargedNonH.add('X');
-        HashSet<Character> tayNegative = new HashSet<Character>();
+        HashSet<Character> tayNegative = new HashSet<>();
         tayNegative.add('D');
         tayNegative.add('E');
         tayNegative.add('B');
         tayNegative.add('Z');
         tayNegative.add('X');
-        HashSet<Character> hydrophilicNonPositive = new HashSet<Character>();
+        HashSet<Character> hydrophilicNonPositive = new HashSet<>();
         hydrophilicNonPositive.add('S');
         hydrophilicNonPositive.add('N');
         hydrophilicNonPositive.add('D');
@@ -189,7 +189,7 @@ final class ConservationSets {
         hydrophilicNonPositive.add('B');
         hydrophilicNonPositive.add('Z');
         hydrophilicNonPositive.add('X');
-        HashSet<Character> tayHydrophilic = new HashSet<Character>();
+        HashSet<Character> tayHydrophilic = new HashSet<>();
         tayHydrophilic.add('S');
         tayHydrophilic.add('N');
         tayHydrophilic.add('D');
@@ -199,7 +199,7 @@ final class ConservationSets {
         tayHydrophilic.add('B');
         tayHydrophilic.add('Z');
         tayHydrophilic.add('X');
-        HashSet<Character> chargedOrHydrophilic = new HashSet<Character>();
+        HashSet<Character> chargedOrHydrophilic = new HashSet<>();
         chargedOrHydrophilic.add('S');
         chargedOrHydrophilic.add('N');
         chargedOrHydrophilic.add('D');
@@ -211,7 +211,7 @@ final class ConservationSets {
         chargedOrHydrophilic.add('H');
         chargedOrHydrophilic.add('B');
         chargedOrHydrophilic.add('X');
-        HashSet<Character> chargedOrHydrophilicOrP = new HashSet<Character>();
+        HashSet<Character> chargedOrHydrophilicOrP = new HashSet<>();
         chargedOrHydrophilicOrP.add('S');
         chargedOrHydrophilicOrP.add('N');
         chargedOrHydrophilicOrP.add('D');
@@ -224,7 +224,7 @@ final class ConservationSets {
         chargedOrHydrophilicOrP.add('P');
         chargedOrHydrophilicOrP.add('B');
         chargedOrHydrophilicOrP.add('X');
-        HashSet<Character> polarNonAromaticOrChargedOrP = new HashSet<Character>();
+        HashSet<Character> polarNonAromaticOrChargedOrP = new HashSet<>();
         polarNonAromaticOrChargedOrP.add('P');
         polarNonAromaticOrChargedOrP.add('T');
         polarNonAromaticOrChargedOrP.add('S');
@@ -253,7 +253,7 @@ final class ConservationSets {
         tayPolar.add('Y');
         tayPolar.add('B');
         tayPolar.add('X');
-        HashSet<Character> polarOrP = new HashSet<Character>();
+        HashSet<Character> polarOrP = new HashSet<>();
         polarOrP.add('T');
         polarOrP.add('S');
         polarOrP.add('N');
@@ -269,7 +269,7 @@ final class ConservationSets {
         polarOrP.add('P');
         polarOrP.add('B');
         polarOrP.add('X');
-        HashSet<Character> polarNonAromaticOrCharged = new HashSet<Character>();
+        HashSet<Character> polarNonAromaticOrCharged = new HashSet<>();
         polarNonAromaticOrCharged.add('T');
         polarNonAromaticOrCharged.add('S');
         polarNonAromaticOrCharged.add('N');
@@ -282,7 +282,7 @@ final class ConservationSets {
         polarNonAromaticOrCharged.add('H');
         polarNonAromaticOrCharged.add('B');
         polarNonAromaticOrCharged.add('X');
-        HashSet<Character> polarNonAromaticNonPositiveOrP = new HashSet<Character>();
+        HashSet<Character> polarNonAromaticNonPositiveOrP = new HashSet<>();
         polarNonAromaticNonPositiveOrP.add('T');
         polarNonAromaticNonPositiveOrP.add('S');
         polarNonAromaticNonPositiveOrP.add('N');
@@ -293,7 +293,7 @@ final class ConservationSets {
         polarNonAromaticNonPositiveOrP.add('P');
         polarNonAromaticNonPositiveOrP.add('B');
         polarNonAromaticNonPositiveOrP.add('X');
-        HashSet<Character> polarNonAromaticNonPositive = new HashSet<Character>();
+        HashSet<Character> polarNonAromaticNonPositive = new HashSet<>();
         polarNonAromaticNonPositive.add('T');
         polarNonAromaticNonPositive.add('S');
         polarNonAromaticNonPositive.add('N');
@@ -303,7 +303,7 @@ final class ConservationSets {
         polarNonAromaticNonPositive.add('Z');
         polarNonAromaticNonPositive.add('B');
         polarNonAromaticNonPositive.add('X');
-        HashSet<Character> smallPolarOrP = new HashSet<Character>();
+        HashSet<Character> smallPolarOrP = new HashSet<>();
         smallPolarOrP.add('P');
         smallPolarOrP.add('T');
         smallPolarOrP.add('S');
@@ -311,25 +311,25 @@ final class ConservationSets {
         smallPolarOrP.add('D');
         smallPolarOrP.add('B');
         smallPolarOrP.add('X');
-        HashSet<Character> smallPolar = new HashSet<Character>();
+        HashSet<Character> smallPolar = new HashSet<>();
         smallPolar.add('T');
         smallPolar.add('S');
         smallPolar.add('N');
         smallPolar.add('D');
         smallPolar.add('B');
         smallPolar.add('X');
-        HashSet<Character> smallHydrophilic = new HashSet<Character>();
+        HashSet<Character> smallHydrophilic = new HashSet<>();
         smallHydrophilic.add('S');
         smallHydrophilic.add('N');
         smallHydrophilic.add('D');
         smallHydrophilic.add('B');
         smallHydrophilic.add('X');
-        HashSet<Character> tayTiny = new HashSet<Character>();
+        HashSet<Character> tayTiny = new HashSet<>();
         tayTiny.add('A');
         tayTiny.add('G');
         tayTiny.add('S');
         tayTiny.add('X');
-        HashSet<Character> tinyOrSmallOrPolar = new HashSet<Character>();
+        HashSet<Character> tinyOrSmallOrPolar = new HashSet<>();
         tinyOrSmallOrPolar.add('A');
         tinyOrSmallOrPolar.add('G');
         tinyOrSmallOrPolar.add('S');
@@ -338,7 +338,7 @@ final class ConservationSets {
         tinyOrSmallOrPolar.add('D');
         tinyOrSmallOrPolar.add('B');
         tinyOrSmallOrPolar.add('X');
-        HashSet<Character> tinyOrSmallOrPolarOrP = new HashSet<Character>();
+        HashSet<Character> tinyOrSmallOrPolarOrP = new HashSet<>();
         tinyOrSmallOrPolarOrP.add('A');
         tinyOrSmallOrPolarOrP.add('G');
         tinyOrSmallOrPolarOrP.add('S');
@@ -348,7 +348,7 @@ final class ConservationSets {
         tinyOrSmallOrPolarOrP.add('B');
         tinyOrSmallOrPolarOrP.add('P');
         tinyOrSmallOrPolarOrP.add('X');
-        HashSet<Character> tinyOrNegativeHydrophilicOrT = new HashSet<Character>();
+        HashSet<Character> tinyOrNegativeHydrophilicOrT = new HashSet<>();
         tinyOrNegativeHydrophilicOrT.add('A');
         tinyOrNegativeHydrophilicOrT.add('G');
         tinyOrNegativeHydrophilicOrT.add('T');
@@ -360,7 +360,7 @@ final class ConservationSets {
         tinyOrNegativeHydrophilicOrT.add('Q');
         tinyOrNegativeHydrophilicOrT.add('Z');
         tinyOrNegativeHydrophilicOrT.add('X');
-        HashSet<Character> tinyOrNegativeHydrophilicOrTOrP = new HashSet<Character>();
+        HashSet<Character> tinyOrNegativeHydrophilicOrTOrP = new HashSet<>();
         tinyOrNegativeHydrophilicOrTOrP.add('A');
         tinyOrNegativeHydrophilicOrTOrP.add('G');
         tinyOrNegativeHydrophilicOrTOrP.add('T');
@@ -373,7 +373,7 @@ final class ConservationSets {
         tinyOrNegativeHydrophilicOrTOrP.add('Z');
         tinyOrNegativeHydrophilicOrTOrP.add('P');
         tinyOrNegativeHydrophilicOrTOrP.add('X');
-        HashSet<Character> tinyOrPolarNonAromatic = new HashSet<Character>();
+        HashSet<Character> tinyOrPolarNonAromatic = new HashSet<>();
         tinyOrPolarNonAromatic.add('A');
         tinyOrPolarNonAromatic.add('G');
         tinyOrPolarNonAromatic.add('T');
@@ -387,7 +387,7 @@ final class ConservationSets {
         tinyOrPolarNonAromatic.add('R');
         tinyOrPolarNonAromatic.add('K');
         tinyOrPolarNonAromatic.add('X');
-        HashSet<Character> all = new HashSet<Character>();
+        HashSet<Character> all = new HashSet<>();
         all.add('A');
         all.add('R');
         all.add('N');
@@ -445,8 +445,8 @@ final class ConservationSets {
     }
 
     static {
-        Map<String, HashSet<Character>> zvelSets = new HashMap<String, HashSet<Character>>();
-        HashSet<Character> hydrophobic = new HashSet<Character>();
+        Map<String, HashSet<Character>> zvelSets = new HashMap<>();
+        HashSet<Character> hydrophobic = new HashSet<>();
         hydrophobic.add('I');
         hydrophobic.add('L');
         hydrophobic.add('V');
@@ -464,7 +464,7 @@ final class ConservationSets {
         hydrophobic.add('X');
         hydrophobic.add('-');
         zvelSets.put("hydrophobic", hydrophobic);
-        HashSet<Character> hydrophobicCompl = new HashSet<Character>();
+        HashSet<Character> hydrophobicCompl = new HashSet<>();
         hydrophobicCompl.add('R');
         hydrophobicCompl.add('E');
         hydrophobicCompl.add('Q');
@@ -477,7 +477,7 @@ final class ConservationSets {
         hydrophobicCompl.add('Z');
         hydrophobicCompl.add('X');
         zvelSets.put("hydrophobicCompl", hydrophobicCompl);
-        HashSet<Character> polar = new HashSet<Character>();
+        HashSet<Character> polar = new HashSet<>();
         polar.add('Y');
         polar.add('W');
         polar.add('H');
@@ -495,7 +495,7 @@ final class ConservationSets {
         polar.add('X');
         polar.add('-');
         zvelSets.put("polar", polar);
-        HashSet<Character> polarCompl = new HashSet<Character>();
+        HashSet<Character> polarCompl = new HashSet<>();
         polarCompl.add('I');
         polarCompl.add('L');
         polarCompl.add('V');
@@ -507,7 +507,7 @@ final class ConservationSets {
         polarCompl.add('F');
         polarCompl.add('X');
         zvelSets.put("polarCompl", polarCompl);
-        HashSet<Character> small = new HashSet<Character>();
+        HashSet<Character> small = new HashSet<>();
         small.add('V');
         small.add('C');
         small.add('A');
@@ -521,7 +521,7 @@ final class ConservationSets {
         small.add('X');
         small.add('-');
         zvelSets.put("small", small);
-        HashSet<Character> smallCompl = new HashSet<Character>();
+        HashSet<Character> smallCompl = new HashSet<>();
         smallCompl.add('I');
         smallCompl.add('L');
         smallCompl.add('M');
@@ -538,12 +538,12 @@ final class ConservationSets {
         smallCompl.add('Z');
         smallCompl.add('X');
         zvelSets.put("smallCompl", smallCompl);
-        HashSet<Character> proline = new HashSet<Character>();
+        HashSet<Character> proline = new HashSet<>();
         proline.add('P');
         proline.add('X');
         proline.add('-');
         zvelSets.put("proline", proline);
-        HashSet<Character> prolineCompl = new HashSet<Character>();
+        HashSet<Character> prolineCompl = new HashSet<>();
         prolineCompl.add('I');
         prolineCompl.add('L');
         prolineCompl.add('V');
@@ -568,14 +568,14 @@ final class ConservationSets {
         prolineCompl.add('J');
         prolineCompl.add('X');
         zvelSets.put("prolineCompl", prolineCompl);
-        HashSet<Character> tiny = new HashSet<Character>();
+        HashSet<Character> tiny = new HashSet<>();
         tiny.add('A');
         tiny.add('G');
         tiny.add('S');
         tiny.add('X');
         tiny.add('-');
         zvelSets.put("tiny", tiny);
-        HashSet<Character> tinyCompl = new HashSet<Character>();
+        HashSet<Character> tinyCompl = new HashSet<>();
         tinyCompl.add('I');
         tinyCompl.add('L');
         tinyCompl.add('V');
@@ -598,7 +598,7 @@ final class ConservationSets {
         tinyCompl.add('J');
         tinyCompl.add('X');
         zvelSets.put("tinyCompl", tinyCompl);
-        HashSet<Character> aliphatic = new HashSet<Character>();
+        HashSet<Character> aliphatic = new HashSet<>();
         aliphatic.add('I');
         aliphatic.add('L');
         aliphatic.add('V');
@@ -606,7 +606,7 @@ final class ConservationSets {
         aliphatic.add('J');
         aliphatic.add('-');
         zvelSets.put("aliphatic", aliphatic);
-        HashSet<Character> aliphaticCompl = new HashSet<Character>();
+        HashSet<Character> aliphaticCompl = new HashSet<>();
         aliphaticCompl.add('C');
         aliphaticCompl.add('A');
         aliphaticCompl.add('G');
@@ -628,7 +628,7 @@ final class ConservationSets {
         aliphaticCompl.add('Z');
         aliphaticCompl.add('X');
         zvelSets.put("aliphaticCompl", aliphaticCompl);
-        HashSet<Character> aromatic = new HashSet<Character>();
+        HashSet<Character> aromatic = new HashSet<>();
         aromatic.add('F');
         aromatic.add('Y');
         aromatic.add('W');
@@ -636,7 +636,7 @@ final class ConservationSets {
         aromatic.add('X');
         aromatic.add('-');
         zvelSets.put("aromatic", aromatic);
-        HashSet<Character> aromaticCompl = new HashSet<Character>();
+        HashSet<Character> aromaticCompl = new HashSet<>();
         aromaticCompl.add('I');
         aromaticCompl.add('L');
         aromaticCompl.add('V');
@@ -658,7 +658,7 @@ final class ConservationSets {
         aromaticCompl.add('J');
         aromaticCompl.add('X');
         zvelSets.put("aromaticCompl", aromaticCompl);
-        HashSet<Character> positive = new HashSet<Character>();
+        HashSet<Character> positive = new HashSet<>();
         positive.add('W');
         positive.add('H');
         positive.add('K');
@@ -666,7 +666,7 @@ final class ConservationSets {
         positive.add('X');
         positive.add('-');
         zvelSets.put("positive", positive);
-        HashSet<Character> positiveCompl = new HashSet<Character>();
+        HashSet<Character> positiveCompl = new HashSet<>();
         positiveCompl.add('I');
         positiveCompl.add('L');
         positiveCompl.add('V');
@@ -688,7 +688,7 @@ final class ConservationSets {
         positiveCompl.add('J');
         positiveCompl.add('X');
         zvelSets.put("positiveCompl", positiveCompl);
-        HashSet<Character> negative = new HashSet<Character>();
+        HashSet<Character> negative = new HashSet<>();
         negative.add('E');
         negative.add('D');
         negative.add('B');
@@ -697,7 +697,7 @@ final class ConservationSets {
         negative.add('Z');
         negative.add('-');
         zvelSets.put("negative", negative);
-        HashSet<Character> negativeCompl = new HashSet<Character>();
+        HashSet<Character> negativeCompl = new HashSet<>();
         negativeCompl.add('I');
         negativeCompl.add('L');
         negativeCompl.add('V');
@@ -720,7 +720,7 @@ final class ConservationSets {
         negativeCompl.add('J');
         negativeCompl.add('X');
         zvelSets.put("negativeCompl", negativeCompl);
-        HashSet<Character> charged = new HashSet<Character>();
+        HashSet<Character> charged = new HashSet<>();
         charged.add('H');
         charged.add('K');
         charged.add('R');
@@ -731,7 +731,7 @@ final class ConservationSets {
         charged.add('X');
         charged.add('-');
         zvelSets.put("charged", charged);
-        HashSet<Character> chargedCompl = new HashSet<Character>();
+        HashSet<Character> chargedCompl = new HashSet<>();
         chargedCompl.add('I');
         chargedCompl.add('L');
         chargedCompl.add('V');
