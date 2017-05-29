@@ -114,7 +114,7 @@ final class Correlation {
         global = new int[numofSequences * (numofSequences - 1) / 2];
         int index = 0;
 
-        List<Callable<Object>> tasks = new ArrayList<Callable<Object>>(
+        List<Callable<Object>> tasks = new ArrayList<>(
                 numofSequences);
         // Assume that there are enough memory to store all the tasks
         for (int i = 0; i < numofSequences; i++) {
@@ -191,7 +191,7 @@ final class Correlation {
      * @param end
      * @return
      */
-    private final int[][] localSimilarity2(final int nrOfWindows,
+    private int[][] localSimilarity2(final int nrOfWindows,
             final int begin, final int end) {
 
         final int[][] localSim = new int[nrOfWindows][numofSequences
@@ -263,7 +263,7 @@ final class Correlation {
         // calculate global similarity
         globalSimilarity();
 
-        List<Callable<Object>> locSimTasks = new ArrayList<Callable<Object>>();
+        List<Callable<Object>> locSimTasks = new ArrayList<>();
 
         for (int i = 0; i < turns; i++) {
             locSimTasks.add(Executors.callable(new LocalSimilarityWrapper(
@@ -285,8 +285,8 @@ final class Correlation {
 
         int[][] result = localSimilarity2(chunkSize, start, end);
 
-        for (int a = 0; a < result.length; a++) {
-            coeffs[coeffsIdx] = pearson(result[a], global);
+        for (int[] result1 : result) {
+            coeffs[coeffsIdx] = pearson(result1, global);
             coeffsIdx++;
         }
     }
@@ -409,9 +409,7 @@ final class Correlation {
             columnResults[i] = windowScores[0];
             columnResults[(columnResults.length - 1) - i] = windowScores[windowScores.length - 1];
         }
-        for (int i = 0; i < windowScores.length; i++) {
-            columnResults[i + ends] = windowScores[i];
-        }
+        System.arraycopy(windowScores, 0, columnResults, ends, windowScores.length);
         return columnResults;
     }
 

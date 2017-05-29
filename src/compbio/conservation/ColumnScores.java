@@ -60,12 +60,8 @@ final class ColumnScores {
 
         Map<Character, Integer> acidsInt = matrix.getTotalAcidsFreqByCol().get(
                 columnNr);
-        if (acidsInt.containsKey('-')
-                && acidsInt.get('-') == matrix.getInverseMatrix()[columnNr].length - 1) {
-            return true;
-        } else {
-            return false;
-        }
+        return acidsInt.containsKey('-')
+                && acidsInt.get('-') == matrix.getInverseMatrix()[columnNr].length - 1;
     }
 
     /**
@@ -83,11 +79,7 @@ final class ColumnScores {
 
         Map<Character, Integer> acidsInt = matrix.getTotalAcidsFreqByCol().get(
                 columnNr);
-        if (acidsInt.size() == 1 && acidsInt.containsKey('-') == false) {
-            return true;
-        } else {
-            return false;
-        }
+        return acidsInt.size() == 1 && acidsInt.containsKey('-') == false;
     }
 
     /**
@@ -100,11 +92,7 @@ final class ColumnScores {
         assert columnNr < matrix.numberOfColumns() : "Column number greater than "
                 + "number of columns in the matrix.";
 
-        if (matrix.getTotalAcidsFreqByCol().get(columnNr).containsKey('-')) {
-            return true;
-        } else {
-            return false;
-        }
+        return matrix.getTotalAcidsFreqByCol().get(columnNr).containsKey('-');
     }
 
     /**
@@ -223,7 +211,7 @@ final class ColumnScores {
             int differentPairs = 0;
             Map<Character, Integer> acidsIntMap = matrix
                     .getTotalAcidsFreqByCol().get(colNr);
-            Map<Character, Integer> acidsIntMapCopy = new HashMap<Character, Integer>(
+            Map<Character, Integer> acidsIntMapCopy = new HashMap<>(
                     acidsIntMap);
             Set<Character> keys = acidsIntMapCopy.keySet();
             keys.remove('-');
@@ -362,14 +350,14 @@ final class ColumnScores {
 
         Map<String, HashSet<Character>> setMap = ConservationSets.taylorSets();
         double smallestSetSize = 0.0;
-        Map<String, Integer> repSets = new HashMap<String, Integer>();
+        Map<String, Integer> repSets = new HashMap<>();
         Set<String> setMapKeys = setMap.keySet();
         Iterator<String> itr = setMapKeys.iterator();
         while (itr.hasNext()) {
             String key = itr.next();
             if (setMap.get(key).containsAll(
                     matrix.getTotalAcidsFreqByCol().get(colNr).keySet())) {
-                repSets.put(key, new Integer(setMap.get(key).size()));
+                repSets.put(key, setMap.get(key).size());
             }
         }
         smallestSetSize = Collections.min(repSets.values());
@@ -394,17 +382,17 @@ final class ColumnScores {
         Map<String, HashSet<Character>> setMap = ConservationSets.taylorSets();
         Set<String> setMapKeys = setMap.keySet();
         double smallestSetSize = 0.0;
-        Map<Character, Integer> acidsMapNoGaps = new HashMap<Character, Integer>(
+        Map<Character, Integer> acidsMapNoGaps = new HashMap<>(
                 matrix.getTotalAcidsFreqByCol().get(colNr));
         if (acidsMapNoGaps.containsKey('-')) {
             acidsMapNoGaps.remove('-');
         }
-        Map<String, Integer> repSets = new HashMap<String, Integer>();
+        Map<String, Integer> repSets = new HashMap<>();
         Iterator<String> itr = setMapKeys.iterator();
         while (itr.hasNext()) {
             String key = itr.next();
             if (setMap.get(key).containsAll(acidsMapNoGaps.keySet())) {
-                repSets.put(key, new Integer(setMap.get(key).size()));
+                repSets.put(key, setMap.get(key).size());
             }
         }
         smallestSetSize = Collections.min(repSets.values());
@@ -662,7 +650,7 @@ final class ColumnScores {
         Set<Character> acInKeys = matrix.getTotalAcidsFreqByCol().get(colNr)
                 .keySet();
         assert !acInKeys.isEmpty();
-        Map<String, Integer> setsFreq = new HashMap<String, Integer>();
+        Map<String, Integer> setsFreq = new HashMap<>();
         while (mirnyKeysItr.hasNext()) {
             String mirnyKey = mirnyKeysItr.next();
             Iterator<Character> acInKeysItr = acInKeys.iterator();
@@ -717,7 +705,7 @@ final class ColumnScores {
         Set<Character> acInKeys = matrix.getTotalAcidsFreqByCol().get(colNr)
                 .keySet();
         assert !acInKeys.isEmpty();
-        Map<String, Integer> setsFreq = new HashMap<String, Integer>();
+        Map<String, Integer> setsFreq = new HashMap<>();
         while (willKeysItr.hasNext()) {
             String willKey = willKeysItr.next();
             Iterator<Character> acInKeysItr = acInKeys.iterator();

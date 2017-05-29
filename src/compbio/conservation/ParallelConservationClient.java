@@ -44,7 +44,7 @@ import compbio.util.Timer;
  */
 final class ParallelConservationClient {
 
-    private final Map<ConservationMethod, double[]> results = new EnumMap<ConservationMethod, double[]>(
+    private final Map<ConservationMethod, double[]> results = new EnumMap<>(
             ConservationMethod.class);
 
     private static class SMERFSParams {
@@ -68,9 +68,9 @@ final class ParallelConservationClient {
                 String colScore = CmdParser.getSMERFSColumnScore(args);
 
                 if (colScore != null) {
-                    SMERFSConstraints colScoreSchema = SMERFSConstraints
+                    SMERFSConstraints colScoreSchemaLocal = SMERFSConstraints
                             .getSMERFSColumnScore(colScore);
-                    if (colScoreSchema == null) {
+                    if (colScoreSchemaLocal == null) {
                         throwIllegalSMERFSParamException("Unrecognized parameter for SMERFS: "
                                 + colScore
                                 + "\n Valid values are "
@@ -164,7 +164,7 @@ final class ParallelConservationClient {
                         ExecutorFactory.getExecutor());
 
                 MethodWrapper wrapper = null;
-                List<MethodWrapper> tasks = new ArrayList<MethodWrapper>();
+                List<MethodWrapper> tasks = new ArrayList<>();
 
                 for (ConservationMethod method : methods) {
                     // Start SMERFS from the main thread, as it has
@@ -250,9 +250,9 @@ final class ParallelConservationClient {
     private double[] runParallelMethod(Conservation scores,
             ConservationMethod method, Timer timer) {
         timer.getStepTime();
-        double[] results = scores.calculateScore(method);
+        double[] resultsLocal = scores.calculateScore(method);
         timer.println(method.toString() + " " + timer.getStepTime() + " ms");
-        return results;
+        return resultsLocal;
     }
 
     public static void main(String[] args) {

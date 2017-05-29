@@ -101,19 +101,19 @@ public final class ConservationFormatter {
         if (alignment == null) {
             throw new NullPointerException("Alignment must be provided");
         }
-        // If outFile is null default to System.out
-        OutputStream out = openPrintWriter(outFilePath);
-        switch (format) {
-            case RESULT_NO_ALIGNMENT:
-                formatResults(scores, out);
-                break;
-            case RESULT_WITH_ALIGNMENT:
-                SequenceUtil.writeFastaKeepTheStream(out, alignment, 80);
-                formatResults(scores, out);
-                break;
+        try ( // If outFile is null default to System.out
+                OutputStream out = openPrintWriter(outFilePath)) {
+            switch (format) {
+                case RESULT_NO_ALIGNMENT:
+                    formatResults(scores, out);
+                    break;
+                case RESULT_WITH_ALIGNMENT:
+                    SequenceUtil.writeFastaKeepTheStream(out, alignment, 80);
+                    formatResults(scores, out);
+                    break;
+            }
+            out.flush();
         }
-        out.flush();
-        out.close();
     }
 
     /**

@@ -40,11 +40,11 @@ final class Alphabet {
     /**
      * An array containing 20 basic amino acids, no gap character
      */
-    private static final char[] alpArray = {'A', 'R', 'N', 'D', 'C', 'Q', 'E',
-        'G', 'H', 'I', 'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V'};
+    private static final char[] ALPHABET_ARRAY = {'A', 'R', 'N', 'D', 'C', 'Q', 'E',
+        'G', 'H', 'I', 'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V', 'B', 'Z', 'X', 'J'};
 
     static {
-        Set<Character> alph = new HashSet<Character>();
+        Set<Character> alph = new HashSet<>();
         alph.add('R');
         alph.add('H');
         alph.add('K');
@@ -65,6 +65,10 @@ final class Alphabet {
         alph.add('Y');
         alph.add('V');
         alph.add('N');
+        alph.add('B');
+        alph.add('Z');
+        alph.add('X');
+        alph.add('J');
         alph.add('-');
         ALPHABET = Collections.unmodifiableSet(alph);
     }
@@ -76,7 +80,7 @@ final class Alphabet {
      */
     static char[] alphabetArray() {
 
-        return alpArray;
+        return ALPHABET_ARRAY;
     }
 
     /**
@@ -102,7 +106,7 @@ final class Alphabet {
             throw new IllegalArgumentException("Column must not be  null");
         }
         Set<Character> alph = ALPHABET;
-        Map<Character, Integer> charCount = new HashMap<Character, Integer>();
+        Map<Character, Integer> charCount = new HashMap<>();
         for (char ch : column) {
             if (ch == '.' || ch == '*' || ch == ' ' || ch == 'X') {
                 ch = '-';
@@ -110,7 +114,7 @@ final class Alphabet {
             assert alph.contains(ch) : "Illegal character in the column";
             Integer count = charCount.get(ch);
             if (count == null) {
-                charCount.put(ch, new Integer(1));
+                charCount.put(ch, 1);
             } else {
                 charCount.put(ch, count + 1);
             }

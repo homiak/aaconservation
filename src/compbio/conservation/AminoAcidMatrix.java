@@ -407,7 +407,7 @@ final class AminoAcidMatrix {
     }
 
     private void calTotalAcidsFreqByCol() {
-        acidsIntMap = new ArrayList<Map<Character, Integer>>(
+        acidsIntMap = new ArrayList<>(
                 this.numberOfColumns());
         for (int i = 0; i < this.numberOfColumns(); i++) {
             acidsIntMap.add(Alphabet.calculateOccurance(this.inverseMatrix[i]));
@@ -452,7 +452,7 @@ final class AminoAcidMatrix {
      */
     private void calTotalAcidsFrequency() {
 
-        Map<Character, Integer> totalFreq = new HashMap<Character, Integer>();
+        Map<Character, Integer> totalFreq = new HashMap<>();
         Set<Character> alph = Alphabet.alphabet();
         for (int i = 0; i < this.numberOfRows(); i++) {
             for (int j = 0; j < this.numberOfColumns(); j++) {
@@ -480,7 +480,7 @@ final class AminoAcidMatrix {
 
         Map<String, HashSet<Character>> sets = ConservationSets
                 .williamsonSets();
-        Map<String, Integer> setsFreq = new HashMap<String, Integer>();
+        Map<String, Integer> setsFreq = new HashMap<>();
         Set<String> setsKeys = sets.keySet();
         Iterator<String> setsKeysItr = setsKeys.iterator();
 
@@ -621,7 +621,7 @@ final class AminoAcidMatrix {
                 }
             }
             // collect all the sequences with the closest distance
-            List<Integer> closestSeqs = new ArrayList<Integer>();
+            List<Integer> closestSeqs = new ArrayList<>();
             for (int b = 0; b < distances.length; b++) {
                 double dis = distances[b];
                 if (dis == closestValue) {
@@ -671,9 +671,9 @@ final class AminoAcidMatrix {
      * @throws IOException
      */
     List<FastaSequence> getAlignment() throws IOException {
-        List<FastaSequence> fastaseqs = new ArrayList<FastaSequence>();
+        List<FastaSequence> fastaseqs = new ArrayList<>();
         for (int i = 0; i < this.numberOfRows(); i++) {
-            StringBuffer sb = new StringBuffer();
+            StringBuilder sb = new StringBuilder();
             for (int j = 0; j < this.getRow(i).length; j++) {
                 sb.append(this.getRow(i)[j]);
             }

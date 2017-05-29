@@ -149,14 +149,14 @@ public class ConservationCalculator {
             List<FastaSequence> alignment, boolean normalize,
             Set<ConservationMethod> methods, ExecutorService executor)
             throws InterruptedException {
-        final Map<ConservationMethod, double[]> results = new EnumMap<ConservationMethod, double[]>(
+        final Map<ConservationMethod, double[]> results = new EnumMap<>(
                 ConservationMethod.class);
 
         // Make a matrix out of the alignment
         AminoAcidMatrix alignMatrix = new AminoAcidMatrix(alignment, null);
 
         Conservation scores = new Conservation(alignMatrix, normalize, executor);
-        List<MethodWrapper> tasks = new ArrayList<MethodWrapper>();
+        List<MethodWrapper> tasks = new ArrayList<>();
 
         for (ConservationMethod method : methods) {
             // Start SMERFS from the main thread, as it has
@@ -250,10 +250,10 @@ public class ConservationCalculator {
         // scores using all the methods available.
         Map<ConservationMethod, double[]> result = getConservation(sequences,
                 true, EnumSet.allOf(ConservationMethod.class), executor);
-        // Print the results to the console.
-        FileOutputStream outfile = new FileOutputStream("results.txt");
-        ConservationFormatter.formatResults(result, outfile);
-        outfile.close();
+        try ( // Print the results to the console.
+                FileOutputStream outfile = new FileOutputStream("results.txt")) {
+            ConservationFormatter.formatResults(result, outfile);
+        }
         // ConservationFormatter.formatResults(result, "test.txt",
         // Format.RESULT_NO_ALIGNMENT, sequences);
         executor.shutdown();

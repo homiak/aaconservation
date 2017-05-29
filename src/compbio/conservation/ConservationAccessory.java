@@ -144,7 +144,7 @@ final class ConservationAccessory {
                 }
             }
             // collect all the sequences with the closest distance
-            List<Integer> closestSeqs = new ArrayList<Integer>();
+            List<Integer> closestSeqs = new ArrayList<>();
             for (int b = 0; b < distances.length; b++) {
                 double dis = distances[b];
                 if (dis == closestValue) {
