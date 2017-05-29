@@ -314,8 +314,7 @@ final class CmdParser {
     static Set<ConservationMethod> getMethodNames(String[] cmd) {
         Set<ConservationMethod> methods = EnumSet
                 .noneOf(ConservationMethod.class);
-        for (int i = 0; i < cmd.length; i++) {
-            String meths = cmd[i];
+        for (String meths : cmd) {
             if (meths.trim().toLowerCase().startsWith(methodKey + pseparator)) {
                 String[] mets = meths.substring(meths.indexOf(pseparator) + 1)
                         .split(",");
