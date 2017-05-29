@@ -238,7 +238,7 @@ final class ConservationSets {
         polarNonAromaticOrChargedOrP.add('H');
         polarNonAromaticOrChargedOrP.add('B');
         polarNonAromaticOrChargedOrP.add('X');
-        HashSet<Character> tayPolar = new HashSet<Character>();
+        HashSet<Character> tayPolar = new HashSet<>();
         tayPolar.add('T');
         tayPolar.add('S');
         tayPolar.add('N');
