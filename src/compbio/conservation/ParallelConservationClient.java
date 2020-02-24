@@ -68,9 +68,9 @@ final class ParallelConservationClient {
                 String colScore = CmdParser.getSMERFSColumnScore(args);
 
                 if (colScore != null) {
-                    SMERFSConstraints colScoreSchemaLocal = SMERFSConstraints
+                    SMERFSConstraints colScoreSchema_ = SMERFSConstraints
                             .getSMERFSColumnScore(colScore);
-                    if (colScoreSchemaLocal == null) {
+                    if (colScoreSchema_ == null) {
                         throwIllegalSMERFSParamException("Unrecognized parameter for SMERFS: "
                                 + colScore
                                 + "\n Valid values are "
@@ -250,9 +250,9 @@ final class ParallelConservationClient {
     private double[] runParallelMethod(Conservation scores,
             ConservationMethod method, Timer timer) {
         timer.getStepTime();
-        double[] resultsLocal = scores.calculateScore(method);
+        double[] results_ = scores.calculateScore(method);
         timer.println(method.toString() + " " + timer.getStepTime() + " ms");
-        return resultsLocal;
+        return results_;
     }
 
     public static void main(String[] args) {

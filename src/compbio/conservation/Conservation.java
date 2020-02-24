@@ -38,7 +38,6 @@ import compbio.data.sequence.FastaSequence;
 import compbio.data.sequence.SMERFSConstraints;
 import compbio.data.sequence.SequenceUtil;
 import compbio.data.sequence.UnknownFileFormatException;
-import java.util.Arrays;
 
 /**
  * Calculates conservation scores. Immutable and thread safe. Implements equals
@@ -499,7 +498,7 @@ final class Conservation {
                 throw new IllegalArgumentException(
                         "Column score not privided or the type provided is not supported."
                         + "Supported scores are: "
-                        + Arrays.toString(SMERFSConstraints.values()));
+                        + SMERFSConstraints.values());
             }
             if (gapTreshold < 0 || gapTreshold > 1) {
                 throw new IllegalArgumentException(
@@ -561,7 +560,10 @@ final class Conservation {
         } else if (!alignMatrix.equals(other.alignMatrix)) {
             return false;
         }
-        return normalize == other.normalize;
+        if (normalize != other.normalize) {
+            return false;
+        }
+        return true;
     }
 
 }
