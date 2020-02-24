@@ -22,8 +22,8 @@
 	</path>
 	
 	<target name="compile" depends="clean">
-		<javac srcdir="${basedir}/src" destdir="${classes}" target="1.6"
-			source="1.6" debug="on" encoding="UTF-8" sourcepath="" >
+		<javac srcdir="${basedir}/src" destdir="${classes}" target="11"
+			source="11" debug="on" encoding="UTF-8" sourcepath="" >
 			<classpath refid="lib.classpath"></classpath>
 		</javac>
 	</target>
