@@ -23,6 +23,7 @@ import java.util.List;
 import java.util.Random;
 
 import compbio.data.sequence.ConservationMethod;
+import java.math.RoundingMode;
 
 final class ConservationAccessory {
 
@@ -321,7 +322,7 @@ final class ConservationAccessory {
             return -1000.0;
         }
         BigDecimal bd = new BigDecimal(Double.toString(d));
-        bd = bd.setScale(decimalPlace, BigDecimal.ROUND_HALF_UP);
+        bd = bd.setScale(decimalPlace, RoundingMode.HALF_UP);
         return bd.doubleValue();
     }
 

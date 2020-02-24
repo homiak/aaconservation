@@ -363,14 +363,14 @@ final class ColumnScores {
 
         Map<String, HashSet<Character>> setMap = ConservationSets.taylorSets();
         double smallestSetSize = 0.0;
-        Map<String, Integer> repSets = new HashMap<String, Integer>();
+        Map<String, Integer> repSets = new HashMap<>();
         Set<String> setMapKeys = setMap.keySet();
         Iterator<String> itr = setMapKeys.iterator();
         while (itr.hasNext()) {
             String key = itr.next();
             if (setMap.get(key).containsAll(
                     matrix.getTotalAcidsFreqByCol().get(colNr).keySet())) {
-                repSets.put(key, new Integer(setMap.get(key).size()));
+                repSets.put(key, setMap.get(key).size());
             }
         }
         smallestSetSize = Collections.min(repSets.values());
@@ -406,7 +406,7 @@ final class ColumnScores {
         while (itr.hasNext()) {
             String key = itr.next();
             if (setMap.get(key).containsAll(acidsMapNoGaps.keySet())) {
-                repSets.put(key, new Integer(setMap.get(key).size()));
+                repSets.put(key, setMap.get(key).size());
             }
         }
         smallestSetSize = Collections.min(repSets.values());
