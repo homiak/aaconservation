@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2010 Agnieszka Golicz & Peter Troshin 
  * 
- * Amino Acid Conservation @version: 1.0 
+ * Amino Acid Conservation @version: 1.1 
  * 
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the Apache License version 2 as published by the
@@ -26,41 +26,41 @@ import compbio.util.Timer;
 /**
  * Wrapper for AA Conservation calculation methods and their results to enable
  * parallel method execution
- * 
+ *
  * @author Peter Troshin
  */
 final class MethodWrapper implements Callable<MethodWrapper> {
 
-	double[] conservation = null;
-	final ConservationMethod method;
-	private final Conservation scores;
+    double[] conservation = null;
+    final ConservationMethod method;
+    private final Conservation scores;
 
-	final Timer timer;
+    final Timer timer;
 
-	MethodWrapper(ConservationMethod method, Conservation scores, Timer timer) {
-		this.method = method;
-		this.scores = scores;
-		if (timer == null) {
-			try {
-				this.timer = new Timer(new NullOutputStream());
-			} catch (IOException e) {
-				e.printStackTrace();
-				throw new AssertionError(
-						"Cannot construct Timer with NullOutputStream?!");
-			}
-		} else {
-			this.timer = new Timer(timer);
-		}
-	}
+    MethodWrapper(ConservationMethod method, Conservation scores, Timer timer) {
+        this.method = method;
+        this.scores = scores;
+        if (timer == null) {
+            try {
+                this.timer = new Timer(new NullOutputStream());
+            } catch (IOException e) {
+                e.printStackTrace();
+                throw new AssertionError(
+                        "Cannot construct Timer with NullOutputStream?!");
+            }
+        } else {
+            this.timer = new Timer(timer);
+        }
+    }
 
-	@Override
-	public MethodWrapper call() throws Exception {
-		assert method != ConservationMethod.SMERFS : " Must use separate method to calculate "
-				+ "SMERFS to avoid thread contantion";
+    @Override
+    public MethodWrapper call() throws Exception {
+        assert method != ConservationMethod.SMERFS : " Must use separate method to calculate "
+                + "SMERFS to avoid thread contantion";
 
-		timer.getStepTime();
-		this.conservation = scores.calculateScore(method);
-		timer.println(method.toString() + " " + timer.getStepTime() + " ms");
-		return this;
-	}
+        timer.getStepTime();
+        this.conservation = scores.calculateScore(method);
+        timer.println(method.toString() + " " + timer.getStepTime() + " ms");
+        return this;
+    }
 }

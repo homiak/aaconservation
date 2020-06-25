@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2010 Agnieszka Golicz & Peter Troshin 
  * 
- * Amino Acid Conservation @version: 1.0 
+ * Amino Acid Conservation @version: 1.1 
  * 
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the Apache License version 2 as published by the
@@ -31,134 +31,129 @@ import compbio.data.sequence.FastaSequence;
 import compbio.data.sequence.SequenceUtil;
 
 /**
- * 
+ *
  * Conservation calculation results writer. A helper class for outputting the
  * conservation results.
- * 
+ *
  * @author Agnieszka Golicz & Peter Troshin
- * 
+ *
  */
 public final class ConservationFormatter {
 
-	/**
-	 * Number if digits after the comma to print to results output
-	 */
-	static final int PRECISION = 3;
+    /**
+     * Number if digits after the comma to print to results output
+     */
+    static final int PRECISION = 3;
 
-	static final NumberFormat NUMBER_FORMAT = NumberFormat
-			.getNumberInstance(Locale.UK);
-	static {
-		NUMBER_FORMAT.setGroupingUsed(false);
-	}
+    static final NumberFormat NUMBER_FORMAT = NumberFormat
+            .getNumberInstance(Locale.UK);
 
-	/**
-	 * Formats and prints results
-	 * 
-	 * @param scores
-	 * @param outFilePath
-	 * @param format
-	 * @throws IOException
-	 */
-	static void formatResults(Map<ConservationMethod, double[]> scores,
-			String outFilePath, Format format, AminoAcidMatrix alignment)
-			throws IOException {
-		if (alignment == null) {
-			throw new NullPointerException("Alignment must be provided!");
-		}
-		formatResults(scores, outFilePath, format, alignment.getAlignment());
-	}
+    static {
+        NUMBER_FORMAT.setGroupingUsed(false);
+    }
 
-	/**
-	 * Formats and prints results. If you do not need to output the alignment
-	 * please use the other method
-	 * {@link ConservationFormatter#formatResults(Map, OutputStream)}
-	 * 
-	 * @param scores
-	 *            the results on the calculation, the Map with Method keys and
-	 *            double[] values.
-	 * @param outFilePath
-	 *            the path to the output file. Optional. If null System.out is
-	 *            used.
-	 * @param format
-	 *            the output format. Optional. Defaults to
-	 *            {@link Format#RESULT_NO_ALIGNMENT}
-	 * @param alignment
-	 *            the alignment for which score was calculated
-	 * @throws IOException
-	 *             if the file cannot be written/created for whatever reason.
-	 * @throws NullPointerException
-	 *             if the alignment is null
-	 */
-	public static void formatResults(Map<ConservationMethod, double[]> scores,
-			String outFilePath, Format format, List<FastaSequence> alignment)
-			throws IOException {
+    /**
+     * Formats and prints results
+     *
+     * @param scores
+     * @param outFilePath
+     * @param format
+     * @throws IOException
+     */
+    static void formatResults(Map<ConservationMethod, double[]> scores,
+            String outFilePath, Format format, AminoAcidMatrix alignment)
+            throws IOException {
+        if (alignment == null) {
+            throw new NullPointerException("Alignment must be provided!");
+        }
+        formatResults(scores, outFilePath, format, alignment.getAlignment());
+    }
 
-		assert format != null : "Format must not be null";
-		assert scores != null : "Scores must not be null";
-		if (scores == null) {
-			return;
-		}
-		if (format == null) {
-			// default to results with no alignment
-			format = Format.RESULT_NO_ALIGNMENT;
-		}
-		if (alignment == null) {
-			throw new NullPointerException("Alignment must be provided");
-		}
-		// If outFile is null default to System.out
-		OutputStream out = openPrintWriter(outFilePath);
-		switch (format) {
-		case RESULT_NO_ALIGNMENT:
-			formatResults(scores, out);
-			break;
-		case RESULT_WITH_ALIGNMENT:
-			SequenceUtil.writeFastaKeepTheStream(out, alignment, 80);
-			formatResults(scores, out);
-			break;
-		}
-		out.flush();
-		out.close();
-	}
+    /**
+     * Formats and prints results. If you do not need to output the alignment
+     * please use the other method
+     * {@link ConservationFormatter#formatResults(Map, OutputStream)}
+     *
+     * @param scores the results on the calculation, the Map with Method keys
+     * and double[] values.
+     * @param outFilePath the path to the output file. Optional. If null
+     * System.out is used.
+     * @param format the output format. Optional. Defaults to
+     * {@link Format#RESULT_NO_ALIGNMENT}
+     * @param alignment the alignment for which score was calculated
+     * @throws IOException if the file cannot be written/created for whatever
+     * reason.
+     * @throws NullPointerException if the alignment is null
+     */
+    public static void formatResults(Map<ConservationMethod, double[]> scores,
+            String outFilePath, Format format, List<FastaSequence> alignment)
+            throws IOException {
 
-	/**
-	 * Use this method to save the conservation results into a file. The call to
-	 * this method produce the same results as
-	 * {@link ConservationFormatter#formatResults(Map, String, Format, List)}
-	 * where the first parameter is scores, the second is a name of the file,
-	 * third if {@link Format#RESULT_NO_ALIGNMENT} and the fourth is null.
-	 * 
-	 * @param scores
-	 *            the results of the calculation - the
-	 *            Map<ConservationMethod,double[]>
-	 * @param outStream
-	 *            the stream to write the results to. Please note that the
-	 *            method leaves this stream open. It is up to the caller to
-	 *            close it!
-	 */
-	public static void formatResults(Map<ConservationMethod, double[]> scores,
-			OutputStream outStream) {
-		if (outStream == null) {
-			throw new NullPointerException("Output stream must be provided!");
-		}
-		PrintWriter print = new PrintWriter(outStream);
-		Iterator<ConservationMethod> itr = scores.keySet().iterator();
-		while (itr.hasNext()) {
-			ConservationMethod key = itr.next();
-			print.print("#" + key.toString() + " ");
-			ConservationAccessory.printArrayOfDouble(scores.get(key), print,
-					PRECISION);
-		}
-		print.println();
-		print.flush();
-	}
+        assert format != null : "Format must not be null";
+        assert scores != null : "Scores must not be null";
+        if (scores == null) {
+            return;
+        }
+        if (format == null) {
+            // default to results with no alignment
+            format = Format.RESULT_NO_ALIGNMENT;
+        }
+        if (alignment == null) {
+            throw new NullPointerException("Alignment must be provided");
+        }
+        try ( // If outFile is null default to System.out
+                OutputStream out = openPrintWriter(outFilePath)) {
+            switch (format) {
+                case RESULT_NO_ALIGNMENT:
+                    formatResults(scores, out);
+                    break;
+                case RESULT_WITH_ALIGNMENT:
+                    SequenceUtil.writeFastaKeepTheStream(out, alignment, 80);
+                    formatResults(scores, out);
+                    break;
+            }
+            out.flush();
+        }
+    }
 
-	static OutputStream openPrintWriter(String outFilePath) throws IOException {
-		OutputStream outstream = null;
-		if (outFilePath == null || outFilePath.isEmpty()) {
-			outstream = System.out;
-		} else {
-			outstream = new FileOutputStream(outFilePath);
-		}
-		return outstream;
-	}
+    /**
+     * Use this method to save the conservation results into a file. The call to
+     * this method produce the same results as
+     * {@link ConservationFormatter#formatResults(Map, String, Format, List)}
+     * where the first parameter is scores, the second is a name of the file,
+     * third if {@link Format#RESULT_NO_ALIGNMENT} and the fourth is null.
+     *
+     * @param scores the results of the calculation - the
+     * Map<ConservationMethod,double[]>
+     * @param outStream the stream to write the results to. Please note that the
+     * method leaves this stream open. It is up to the caller to close it!
+     */
+    public static void formatResults(Map<ConservationMethod, double[]> scores,
+            OutputStream outStream) {
+        if (outStream == null) {
+            throw new NullPointerException("Output stream must be provided!");
+        }
+        PrintWriter print = new PrintWriter(outStream);
+        Iterator<ConservationMethod> itr = scores.keySet().iterator();
+        while (itr.hasNext()) {
+            ConservationMethod key = itr.next();
+            // the longest of the methods' name length is 14
+            print.print("#" + key.toString() + String.format("%0"
+                    + (14 - key.toString().length() + 1) + "d", 0).replace("0", " "));
+            ConservationAccessory.printArrayOfDouble(scores.get(key), print,
+                    PRECISION);
+        }
+        print.println();
+        print.flush();
+    }
+
+    static OutputStream openPrintWriter(String outFilePath) throws IOException {
+        OutputStream outstream = null;
+        if (outFilePath == null || outFilePath.isEmpty()) {
+            outstream = System.out;
+        } else {
+            outstream = new FileOutputStream(outFilePath);
+        }
+        return outstream;
+    }
 }

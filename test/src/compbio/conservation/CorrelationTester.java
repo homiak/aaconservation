@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2010 Agnieszka Golicz & Peter Troshin 
  * 
- * Amino Acid Conservation @version: 1.0 
+ * Amino Acid Conservation @version: 1.1 
  * 
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the Apache License version 2 as published by the
@@ -29,94 +29,81 @@ import compbio.data.sequence.SequenceUtil;
 
 public class CorrelationTester {
 
-	void printCoeffs(double[] arr1) {
+    void printCoeffs(double[] arr1) {
 
-		// assert arr1.length == arr2.length;
+        // assert arr1.length == arr2.length;
+        for (int i = 0; i < arr1.length; i++) {
 
-		for (int i = 0; i < arr1.length; i++) {
+            System.out.println(i + ": " + arr1[i]);
+        }
+    }
 
-			System.out.println(i + ": " + arr1[i]);
-		}
-	}
+    @Test
+    public void gapColumnTester() {
+        AminoAcidMatrix.gapOnlyColumnCheck(new char[]{'a', ' ', ' ', ' ',
+            ' ', ' '}, new char[]{'-', '.', ' ', ':'});
+        AminoAcidMatrix.gapOnlyColumnCheck(new char[]{'-', ' ', ' ', ' ',
+            ' ', ' '}, new char[]{' ', ' ', ' ', ' '});
 
-	@Test
-	public void gapColumnTester() {
-		AminoAcidMatrix.gapOnlyColumnCheck(new char[] { 'a', ' ', ' ', ' ',
-				' ', ' ' }, new char[] { '-', '.', ' ', ':' });
-		AminoAcidMatrix.gapOnlyColumnCheck(new char[] { '-', ' ', ' ', ' ',
-				' ', ' ' }, new char[] { ' ', ' ', ' ', ' ' });
+    }
 
-	}
+    @Test(expectedExceptions = IllegalArgumentException.class)
+    public void gapColumnTesterIllegal() {
+        AminoAcidMatrix.gapOnlyColumnCheck(new char[]{' ', ' ', ' ', ' ',
+            ' ', ' '}, new char[]{' ', '-', '*', '.'});
 
-	@Test(expectedExceptions = IllegalArgumentException.class)
-	public void gapColumnTesterIllegal() {
-		AminoAcidMatrix.gapOnlyColumnCheck(new char[] { ' ', ' ', ' ', ' ',
-				' ', ' ' }, new char[] { ' ', '-', '*', '.' });
+    }
 
-	}
+    @Test(expectedExceptions = IllegalArgumentException.class)
+    public void gapColumnTesterIllegal2() {
+        AminoAcidMatrix.gapOnlyColumnCheck(new char[]{'-', ' ', ' ', ' ',
+            ' ', ' '}, new char[]{' ', ' ', ' ', '-'});
 
-	@Test(expectedExceptions = IllegalArgumentException.class)
-	public void gapColumnTesterIllegal2() {
-		AminoAcidMatrix.gapOnlyColumnCheck(new char[] { '-', ' ', ' ', ' ',
-				' ', ' ' }, new char[] { ' ', ' ', ' ', '-' });
+    }
 
-	}
+    @Test()
+    public void gapColumnTesterIllegal3() {
+        AminoAcidMatrix.gapOnlyColumnCheck(new char[]{'-', '.', ' ', 'a',
+            ' ', '-'}, new char[]{' ', '.', '-'});
 
-	@Test()
-	public void gapColumnTesterIllegal3() {
-		AminoAcidMatrix.gapOnlyColumnCheck(new char[] { '-', '.', ' ', 'a',
-				' ', '-' }, new char[] { ' ', '.', '-' });
+    }
 
-	}
+    void Corr1Tester() throws InterruptedException, ExecutionException {
 
-	void Corr1Tester() throws InterruptedException, ExecutionException {
+        String filePath = "/homes/agolicz/alignments/alignment1";
 
-		String filePath = "/homes/agolicz/alignments/alignment1";
+        InputStream inStr = null;
 
-		InputStream inStr = null;
+        List<FastaSequence> fastaSeqs = null;
 
-		List<FastaSequence> fastaSeqs = null;
+        try {
 
-		try {
+            inStr = new FileInputStream(filePath);
 
-			inStr = new FileInputStream(filePath);
+        } catch (IOException e) {
 
-		}
+            System.out.println("Can not find file");
 
-		catch (IOException e) {
+        }
 
-			System.out.println("Can not find file");
+        try {
 
-		}
+            fastaSeqs = SequenceUtil.readFasta(inStr);
+        } catch (IOException e) {
 
-		try {
+            System.out.println("Sth wrong with reading the file");
+        }
 
-			fastaSeqs = SequenceUtil.readFasta(inStr);
-		}
+        AminoAcidMatrix matrix = new AminoAcidMatrix(fastaSeqs, null);
 
-		catch (IOException e) {
-
-			System.out.println("Sth wrong with reading the file");
-		}
-
-		AminoAcidMatrix matrix = new AminoAcidMatrix(fastaSeqs, null);
-
-		// Correlation corr = new Correlation(matrix, 5, 0.1);
-
-		// double[] coeffs = corr.calcPearson();
-
-		// double[] coeffs2 = Correlation.calcPearsonCoeff3(matrix, 5);
-
-		// int[][] localSim = Correlation.localSimilarity2(matrix);
-
-		// int[] globalSim = Correlation.globalSimilarity(matrix);
-
-		// printCoeffs(coeffs, coeffs2);
-
-		// double[] scores = corr.giveMaxToColumn(coeffs);
-
-		// printCoeffs(coeffs);
-
-	}
+        // Correlation corr = new Correlation(matrix, 5, 0.1);
+        // double[] coeffs = corr.calcPearson();
+        // double[] coeffs2 = Correlation.calcPearsonCoeff3(matrix, 5);
+        // int[][] localSim = Correlation.localSimilarity2(matrix);
+        // int[] globalSim = Correlation.globalSimilarity(matrix);
+        // printCoeffs(coeffs, coeffs2);
+        // double[] scores = corr.giveMaxToColumn(coeffs);
+        // printCoeffs(coeffs);
+    }
 
 }

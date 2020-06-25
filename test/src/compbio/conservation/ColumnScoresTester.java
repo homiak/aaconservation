@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2010 Agnieszka Golicz & Peter Troshin 
  * 
- * Amino Acid Conservation @version: 1.0 
+ * Amino Acid Conservation @version: 1.1 
  * 
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the Apache License version 2 as published by the
@@ -20,165 +20,152 @@ import org.testng.annotations.Test;
 
 public class ColumnScoresTester {
 
-	char a = 'D';
-	char b = 'D';
-	char c = 'D';
-	char d = 'D';
-	char e = 'D';
-	char f = 'E';
-	char g = 'E';
-	char h = 'E';
-	char i = 'F';
-	char j = '-';
+    char a = 'D';
+    char b = 'D';
+    char c = 'D';
+    char d = 'D';
+    char e = 'D';
+    char f = 'E';
+    char g = 'E';
+    char h = 'E';
+    char i = 'F';
+    char j = '-';
 
-	char[] column = { a, b, c, d, e, f, g, h, i, j };
+    char[] column = {a, b, c, d, e, f, g, h, i, j};
 
-	AminoAcidMatrix matrix = new AminoAcidMatrix(column);
+    AminoAcidMatrix matrix = new AminoAcidMatrix(column);
 
-	@Test
-	public void karlinScoreTester() {
+    @Test
+    public void karlinScoreTester() {
 
-		double kar = ColumnScores.karlinScore(matrix, 0);
+        double kar = ColumnScores.karlinScore(matrix, 0);
 
-		System.out.println(kar);
+        System.out.println(kar);
 
-		// Assert.assertTrue(kar != -2.0);
-		// Assert.assertEquals(kar, 0.269, 0.001);
+        // Assert.assertTrue(kar != -2.0);
+        // Assert.assertEquals(kar, 0.269, 0.001);
+    }
 
-	}
+    @Test
+    public void armonScoreTester() {
 
-	@Test
-	public void armonScoreTester() {
+        double arm = ColumnScores.armonScore(matrix, 0);
 
-		double arm = ColumnScores.armonScore(matrix, 0);
+        System.out.println(arm);
 
-		System.out.println(arm);
+        // Assert.assertEquals(arm, 26.760, 0.001);
+    }
 
-		// Assert.assertEquals(arm, 26.760, 0.001);
+    @Test
+    public void thompsonScoreTester() {
 
-	}
+        double thom = ColumnScores.thompsonScore(matrix, 0);
 
-	@Test
-	public void thompsonScoreTester() {
+        System.out.println(thom);
 
-		double thom = ColumnScores.thompsonScore(matrix, 0);
+        // Assert.assertEquals(thom, 8.784, 0.001);
+    }
 
-		System.out.println(thom);
+    @Test
+    public void lancetScoreTester() {
 
-		// Assert.assertEquals(thom, 8.784, 0.001);
+        double lan = ColumnScores.notLancetScore(matrix, 0);
 
-	}
+        System.out.println(lan);
 
-	@Test
-	public void lancetScoreTester() {
+        // Assert.assertEquals(lan, -0.490, 0.001);
+    }
 
-		double lan = ColumnScores.notLancetScore(matrix, 0);
+    @Test
+    public void mirnyTester() {
 
-		System.out.println(lan);
+        double mirny = ColumnScores.mirnyScore(matrix, 0);
 
-		// Assert.assertEquals(lan, -0.490, 0.001);
+        System.out.println(mirny);
 
-	}
+        // Assert.assertEquals(mirny, -0.409, 0.001);
+    }
 
-	@Test
-	public void mirnyTester() {
+    @Test
+    public void WilliamsonTester() {
 
-		double mirny = ColumnScores.mirnyScore(matrix, 0);
+        double will = ColumnScores.williamsonScore(matrix, 0);
 
-		System.out.println(mirny);
+        System.out.println(will);
 
-		// Assert.assertEquals(mirny, -0.409, 0.001);
+        // Assert.assertEquals(will, -2.072, 0.001);
+    }
 
-	}
+    @Test
+    public void TaylorTester() {
 
-	@Test
-	public void WilliamsonTester() {
+        double tay = ColumnScores.taylorScoreGaps(matrix, 0);
 
-		double will = ColumnScores.williamsonScore(matrix, 0);
+        System.out.println(tay);
 
-		System.out.println(will);
+        // Assert.assertEquals(tay, 21);
+    }
 
-		// Assert.assertEquals(will, -2.072, 0.001);
+    @Test
+    public void KabatTester() {
 
-	}
+        double kab = ColumnScores.kabatScore(matrix, 0);
 
-	@Test
-	public void TaylorTester() {
+        System.out.println(kab);
 
-		double tay = ColumnScores.taylorScoreGaps(matrix, 0);
+        // Assert.assertEquals(kab, 6.0, 0.001);
+    }
 
-		System.out.println(tay);
+    @Test
+    public void schneiderTester() {
 
-		// Assert.assertEquals(tay, 21);
+        double sch = ColumnScores.schneiderScore(matrix, 0);
 
-	}
+        System.out.println(sch);
 
-	@Test
-	public void KabatTester() {
+        // Assert.assertEquals(sch, 0.313, 0.001);
+    }
 
-		double kab = ColumnScores.kabatScore(matrix, 0);
+    @Test
+    public void joresScoreTester() {
 
-		System.out.println(kab);
+        double jor = ColumnScores.joresScore(matrix, 0);
 
-		// Assert.assertEquals(kab, 6.0, 0.001);
+        System.out.println(jor);
 
-	}
+        // Assert.assertEquals(jor, 15.0, 0.001);
+    }
 
-	@Test
-	public void schneiderTester() {
+    @Test
+    public void sanderScoreTester() {
 
-		double sch = ColumnScores.schneiderScore(matrix, 0);
+        double san = ColumnScores.sanderScore(matrix, 0);
 
-		System.out.println(sch);
+        System.out.println(san);
 
-		// Assert.assertEquals(sch, 0.313, 0.001);
+        // Assert.assertEquals(san, -900.000, 0.001);
+    }
 
-	}
+    @Test
+    public void valdarScoreTester() {
 
-	@Test
-	public void joresScoreTester() {
+        double val = ColumnScores.valdarScore(matrix, 0);
 
-		double jor = ColumnScores.joresScore(matrix, 0);
+        System.out.println(val);
 
-		System.out.println(jor);
+        // Assert.assertEquals(val, 7.896, 0.001);
+    }
 
-		// Assert.assertEquals(jor, 15.0, 0.001);
+    @Test
+    public void landgarfScoreTester() {
 
-	}
+        double lan = ColumnScores.landgrafScore(matrix, 0);
 
-	@Test
-	public void sanderScoreTester() {
+        System.out.println("Landgraf");
 
-		double san = ColumnScores.sanderScore(matrix, 0);
+        System.out.println(lan);
 
-		System.out.println(san);
-
-		// Assert.assertEquals(san, -900.000, 0.001);
-
-	}
-
-	@Test
-	public void valdarScoreTester() {
-
-		double val = ColumnScores.valdarScore(matrix, 0);
-
-		System.out.println(val);
-
-		// Assert.assertEquals(val, 7.896, 0.001);
-
-	}
-
-	@Test
-	public void landgarfScoreTester() {
-
-		double lan = ColumnScores.landgrafScore(matrix, 0);
-
-		System.out.println("Landgraf");
-
-		System.out.println(lan);
-
-		// Assert.assertEquals(lan, 1177.130, 0.001);
-
-	}
+        // Assert.assertEquals(lan, 1177.130, 0.001);
+    }
 
 }

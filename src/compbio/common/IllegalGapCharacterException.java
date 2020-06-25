@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2010 Agnieszka Golicz & Peter Troshin 
  * 
- * Amino Acid Conservation @version: 1.0 
+ * Amino Acid Conservation @version: 1.1 
  * 
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the Apache License version 2 as published by the
@@ -19,13 +19,13 @@ package compbio.common;
 /**
  * Thrown when an argument provided as a gap character can not be parsed as
  * char.
- * 
+ *
  * @author Agnieszka Golicz
  */
 public class IllegalGapCharacterException extends IllegalArgumentException {
 
-	public IllegalGapCharacterException(String message) {
+    public IllegalGapCharacterException(String message) {
 
-		super(message);
-	}
+        super(message);
+    }
 }

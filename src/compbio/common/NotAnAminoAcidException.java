@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2010 Agnieszka Golicz & Peter Troshin 
  * 
- * Amino Acid Conservation @version: 1.0 
+ * Amino Acid Conservation @version: 1.1 
  * 
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the Apache License version 2 as published by the
@@ -19,13 +19,13 @@ package compbio.common;
 /**
  * Thrown when there is an illegal(not an amino acid or known gap character) in
  * the sequence list or character array fed into AminoAcidMatrix constructor)
- * 
+ *
  * @author Agnieszka Golicz
  */
 public class NotAnAminoAcidException extends RuntimeException {
 
-	public NotAnAminoAcidException(String message) {
+    public NotAnAminoAcidException(String message) {
 
-		super(message);
-	}
+        super(message);
+    }
 }
